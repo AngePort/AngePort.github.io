@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Essay_1"
+title: "The Newbie Experince!"
 # All dates must be YYYY-MM-DD format!
 date: 2024-01-17
 published: true
