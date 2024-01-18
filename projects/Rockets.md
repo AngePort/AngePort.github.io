@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/ARLISS2023-students.jpg
 title: "First Nations Launch 2024, Team E.P.I.C."
-date: 2023
+date: 2024
 published: true
 labels:
   - Rockets
