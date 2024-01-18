@@ -18,7 +18,7 @@ Professor Dan Port
 
 17 January 2024
 
-                                                          JavaScript Experience
+
 I dove into the understanding of JavaScript as a beginner in the field of a new programming language. JavaScript offered me new ideas on how things can be problem-solved, such as using functions or objects to implement a given problem. It was a very exciting experience to learn about coding using JavaScript while doing basic problem understanding through exercises given in my class assignments. It got me hooked on learning much simpler ways to tackle a complex algorithm. I've seen myself many times getting stuck on understanding a problem, but that is the best part about learning a new programming language – I will soon have that 'OH!' moment signifying my one step closer to understanding what I was stuck on.
 
 I have not taken a class on a different programming language such as JavaScript, but I have always wanted to learn how to code. So, I have dipped my toe into programming languages such as Python, C, and C++. Not realizing how they differ from each other during my era of being a complete newbie to programming, diving deep into JavaScript really got me to understand and see how programming languages differ from one another. There is a significant difference in how each programming language's code is written. There is a way to always have a function to do a certain thing in each programming language, but it takes the user a different route when using each language.
