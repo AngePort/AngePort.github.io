@@ -8,6 +8,7 @@ published: true
 labels:
   - Computer Science
   - Reflection
+  - Learning
 ---
 
 Angello Portillo
