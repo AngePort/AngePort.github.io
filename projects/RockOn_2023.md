@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/2023 rockon/IMG_5627.jpg
+image: img/2023 rockon/RockOn 2023.jpg
 title: "RockOn 2023"
 date: 2023
 published: true
