@@ -14,15 +14,14 @@ labels:
 # From Browser to Desktop!
 
 <img width="200px"
-class="rounded float-start pe-4"
+class="rounded mx-auto d-block"
 src="../img/Essay_3_pictures/GitHub_Desktop_Logo.png" >
 
-<img width="200px"
-class="rounded float-end pe-4"
-src="../img/Essay_3_pictures/IntelliJ_logo.jpg" >
-
 From learning about IDE’s (integrated development environment) and GitHubs Desktop, I got to implement new tools under my belt of coding and software development. It was a really exciting learning process to understand that not only we can code from our local computer but, any computer! Parting ways from JSfiddle, was a really big change for me to get used to, but in this case it was a positive change for me to understand the most beneficial way to work. Due to the fact that it provided an easier way to organize my projects and repositories, and code with the help of ESlint, a tool that will help assist the user with coding.
-	
+
+<img width="200px"
+class="rounded mx-auto d-block"
+src="../img/Essay_3_pictures/IntelliJ_logo.jpg" >
 
 When creating or starting a new project, it was really hard to understand at first but as I passed the learning curve for its knowledge, it is really easy and organized to create new repositories. I loved that we could create new repositories in our local desktop and not depend on the browser or internet to do so. Having to do things locally gave me the sense of working in environments that are flexible, and this is something I believe that computer science majors should know how to do. IntelliJ, the IDE that I've learned to use, is a code editing software that provides us the place to create and edit code. It goes hand in hand with GitHub’s Desktop, I have GitHub Desktop create a repository and I edit that repository on IntelliJ. While IntelliJ is one of the many IDE’s out there, this IDE provides the user with a friendly interface that will be easily guidable to their [website](https://www.jetbrains.com/help/idea/getting-started.html). This is what I believe to be a positive learning process when switching from browser to desktop.
 
