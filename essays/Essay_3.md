@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "New Tools Has Been Obtained!"
 # All dates must be YYYY-MM-DD format!
-date: 2024-01-24
+date: 2024-02-7
 published: true
 labels:
   - Computer Science
