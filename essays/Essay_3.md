@@ -18,7 +18,7 @@ class="rounded float-start pe-4"
 src="../img/Essay_3_pictures/GitHub_Desktop_Logo.png" >
 
 <img width="200px"
-class="rounded float-start pe-4"
+class="rounded float-end pe-4"
 src="../img/Essay_3_pictures/IntelliJ_logo.jpg" >
 
 From learning about IDE’s (integrated development environment) and GitHubs Desktop, I got to implement new tools under my belt of coding and software development. It was a really exciting learning process to understand that not only we can code from our local computer but, any computer! Parting ways from JSfiddle, was a really big change for me to get used to, but in this case it was a positive change for me to understand the most beneficial way to work. Due to the fact that it provided an easier way to organize my projects and repositories, and code with the help of ESlint, a tool that will help assist the user with coding.
