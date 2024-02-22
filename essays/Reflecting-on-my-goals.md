@@ -9,7 +9,7 @@ labels:
   - Smart Goals
   - Reflection
 ---
-#Smart Goals!
+# Smart Goals!
 
 <img width="200px"
 class="rounded mx-auto d-block"
@@ -23,7 +23,7 @@ src="../img/Reflection-on-my-goals/Reflection-Goals.jpg" >
 
 3) I would like to be able to bond and share connections in this class either through the teacher, or students. Having connections and being able to have the skill to work with a team or partner is a must have for me. I will know so through the great value that I have recieved when working with people next to me. Every little group excercise is a practice towards this goal. Its attainable because its a skill that just needs to be sharpened. Relevent to the fact that the world is not lonely. Its something that is Achieved at any time but must be used or the skill will rust.
 
-##Looking Back At It
+## Looking Back At It
 
 <img width="200px"
 class="rounded mx-auto d-block"
