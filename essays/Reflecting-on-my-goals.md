@@ -15,7 +15,7 @@ labels:
 class="rounded mx-auto d-block"
 src="../img/Reflection-on-my-goals/Reflection-Goals.jpg" >
 
-##Looking at my "smart goals" that I have created.
+## Looking at my "smart goals" that I have created.
 
 1) I want to accomplish learning about softwares and how software engineering differs from programming. I will know that I reached this goal when I have created a software or worked with them till it is completed. This is attainable through this class. Its relevant due to the fact that I want to pursue a degree in computer science. Achieved hopefully after this class.
 
