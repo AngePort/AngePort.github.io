@@ -13,7 +13,7 @@ labels:
   - Reflection
 ---
 
-# Is The Struggle Worth It?
+# Why Know you Know?
 
 <img width="200px"
 class="rounded mx-auto d-block"
