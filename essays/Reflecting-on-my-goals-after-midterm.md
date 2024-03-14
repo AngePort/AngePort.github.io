@@ -11,9 +11,9 @@ labels:
 ---
 # Smart Goals!
 ## Looking at my "smart goals" that I have created.
-
 <img width="200px"
-class="rounded mx-auto d-block" src"../img/Reflection-on-my-goals/Striving image.jpeg" >
+class="rounded mx-auto d-block"
+src="../img/Reflection-on-my-goals/Striving image.jpeg" >
 
 1) I want to accomplish learning about softwares and how software engineering differs from programming. I will know that I reached this goal when I have created a software or worked with them till it is completed. This is attainable through this class. Its relevant due to the fact that I want to pursue a degree in computer science. Achieved hopefully after this class.
 
@@ -28,9 +28,12 @@ class="rounded mx-auto d-block" src"../img/Reflection-on-my-goals/Striving image
 Reflecting on my first SMART goal, I embarked on a journey to deepen my understanding of software engineering and distinguish it from mere programming. Throughout this semester, I have diligently immersed myself in exploring various software platforms and dissecting the intricacies of their engineering aspects. From unraveling the functionalities of Intellij to mastering version control with GitHub, I've strived to grasp the essence of software development from conception to completion. Conquering challenging feats like creating applications using Meteor has been instrumental in solidifying my comprehension of software engineering principles. As I look back, I recognize the significant strides I've made towards achieving this goal, each milestone marking a substantial advancement in my journey as a scholar and aspiring computer scientist.
 
 <img width="200px"
-class="rounded mx-auto d-block" src"../img/Reflection-on-my-goals/Intellij.png" >
+class="rounded mx-auto d-block"
+src="../img/Reflection-on-my-goals/Intellij.png" >
+
 <img width="200px"
-class="rounded mx-auto d-block" src"../img/Reflection-on-my-goals/Meteor .svg" >
+class="rounded mx-auto d-block"
+src="../img/Reflection-on-my-goals/Meteor .svg" >
 
 **SMART Goal 2: Proficiency with Tools for Software Development**
 
