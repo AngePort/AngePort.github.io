@@ -13,7 +13,7 @@ labels:
 ## Looking at my "smart goals" that I have created.
 <img width="200px"
 class="rounded mx-auto d-block"
-src="../img/Reflection-on-my-goals/Striving image.jpeg" >
+src="../img/Reflection-on-my-goals/Striving image.jpg" >
 
 1) I want to accomplish learning about softwares and how software engineering differs from programming. I will know that I reached this goal when I have created a software or worked with them till it is completed. This is attainable through this class. Its relevant due to the fact that I want to pursue a degree in computer science. Achieved hopefully after this class.
 
@@ -29,11 +29,11 @@ Reflecting on my first SMART goal, I embarked on a journey to deepen my understa
 
 <img width="200px"
 class="rounded mx-auto d-block"
-src="../img/Reflection-on-my-goals/Intellij.png" >
+src="../img/Reflection-on-my-goals/Intellij.jpg" >
 
 <img width="200px"
 class="rounded mx-auto d-block"
-src="../img/Reflection-on-my-goals/Meteor .svg" >
+src="../img/Reflection-on-my-goals/Meteor .jpg" >
 
 **SMART Goal 2: Proficiency with Tools for Software Development**
 
