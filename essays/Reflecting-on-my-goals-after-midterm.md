@@ -24,22 +24,21 @@ class="rounded mx-auto d-block" src"../img/Reflection-on-my-goals/Striving image
 ## Looking back at it now
 
 **SMART Goal 1: Learning about Software Engineering**
+
+Reflecting on my first SMART goal, I embarked on a journey to deepen my understanding of software engineering and distinguish it from mere programming. Throughout this semester, I have diligently immersed myself in exploring various software platforms and dissecting the intricacies of their engineering aspects. From unraveling the functionalities of Intellij to mastering version control with GitHub, I've strived to grasp the essence of software development from conception to completion. Conquering challenging feats like creating applications using Meteor has been instrumental in solidifying my comprehension of software engineering principles. As I look back, I recognize the significant strides I've made towards achieving this goal, each milestone marking a substantial advancement in my journey as a scholar and aspiring computer scientist.
+
 <img width="200px"
 class="rounded mx-auto d-block" src"../img/Reflection-on-my-goals/Intellij.png" >
 <img width="200px"
 class="rounded mx-auto d-block" src"../img/Reflection-on-my-goals/Meteor .svg" >
 
-Reflecting on my first SMART goal, I embarked on a journey to deepen my understanding of software engineering and distinguish it from mere programming. Throughout this semester, I have diligently immersed myself in exploring various software platforms and dissecting the intricacies of their engineering aspects. From unraveling the functionalities of Intellij to mastering version control with GitHub, I've strived to grasp the essence of software development from conception to completion. Conquering challenging feats like creating applications using Meteor has been instrumental in solidifying my comprehension of software engineering principles. As I look back, I recognize the significant strides I've made towards achieving this goal, each milestone marking a substantial advancement in my journey as a scholar and aspiring computer scientist.
-
 **SMART Goal 2: Proficiency with Tools for Software Development**
 
-In pursuit of my second SMART goal, I endeavored to acquire proficiency with an array of tools essential for software development. Throughout the semester, I've embraced the opportunity to familiarize myself with new technologies and methodologies, enabling me to navigate the complexities of software creation with confidence. Engaging in hands-on projects and delving into the background of software through practical application has empowered me to develop a comprehensive understanding of the tools at my disposal. With each project completed, I've not only honed my technical prowess but also cultivated a deeper appreciation for the foundational aspects of coding. As I reflect on my journey, I am buoyed by the progress made towards this goal, confident that the skills acquired will serve as invaluable assets in my future endeavors in the realm of software development.
+In pursuit of my second SMART goal, I dedicated myself to mastering essential tools for software development. Throughout the semester, I delved into React and React-Bootstrap, leveraging their component-based architecture and extensive libraries to build dynamic user interfaces with ease. Additionally, I familiarized myself with npm, honing my skills in managing dependencies and integrating third-party packages to enhance application functionality. Through hands-on projects and practical exercises, I gained invaluable insights into modern software development practices, equipping myself with the expertise and confidence to tackle complex coding tasks with proficiency and finesse.
 
 **SMART Goal 3: Building Connections and Collaborative Skills**
 
-Turning to my third SMART goal, I set out to foster meaningful connections and cultivate collaborative skills within the academic community. Recognizing the importance of interpersonal relationships and teamwork in the field of computer science, I actively sought opportunities to engage with both peers and instructors. Participating in group exercises and collaborative projects provided me with invaluable experiences to sharpen my collaborative skills and forge lasting connections. Each interaction, whether with a teacher or fellow student, has enriched my learning journey and reinforced the significance of community in achieving shared goals. As I anticipate the culmination of this semester, I am filled with gratitude for the connections established and the collaborative skills honed, knowing that they will continue to shape my growth and success as a future computer scientist.
-
-
+As for my third SMART GOAL, this is something that is important to me due to the fact that it provides a sense of being part of a community that I strive to be in. And when realizing the amount of connections that I have intertwined myself with those who strive for the same SMART GOALS as me, it is a goal that when I finally look back after this spring semester, I know that I have done plus Ultra.
 
 
 
