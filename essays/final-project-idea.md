@@ -10,9 +10,9 @@ labels:
 # Skate Park App
 
 ## Overview
-* The *problem*: Tourists, or just locals wanting to have a BBQ with friends and family may want easy access to possible parks across the island without having to search all over the internet.
+* The *problem*: Tourists, or just locals wanting to have a skate session with friends and family,  may want easy access to possible parks across the island without having to search all over the internet.
 
-* The *solution*: How about a platform that allows users to post/propose possible spots for chill, picnic spots. Upload pictures, post reviews of the spot, leave a rating out of 5 stars.
+* The *solution*: How about a platform that allows users to post/propose possible spots for skating, upload pictures, post reviews of the spot, leave a rating out of 5 stars, and see if the park is full of other skaters or bad weather conditions.
 
 ## Approach
 
