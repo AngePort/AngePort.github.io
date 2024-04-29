@@ -18,7 +18,7 @@ labels:
 class="rounded mx-auto d-block"
 src="../img/design-patterns-saves-me-problems/antidote-pill.png" >
 
-In the realm of computer science, the journey from novice to adept programmer is marked by numerous milestones, one of the most significant being the understanding and application of design patterns. Design patterns are reusable solutions to common problems encountered in software design and development. They provide a structured approach to solving issues, serving as blueprints that streamline the coding process and enhance the quality of software products.
+In the realm of computer science, the journey from rookie to a well rounded programmer is marked by numerous milestones, one of the most significant being the understanding and application of design patterns. Design patterns are reusable solutions to common problems encountered in software design and development. They provide a structured approach to solving issues, serving as blueprints that streamline the coding process and enhance the quality of software products.
 
 ### Problem Solving
 
