@@ -70,13 +70,11 @@ var uhdata = [
 // Extracting FISCAL_YEAR using _.pluck
 var fiscalYears = _.pluck(uhdata, 'FISCAL_YEAR');
 ```
-- This code snippet serves as a brief illustration drawn from the experience WODS we engage with independently. Here, I utilized the "pluck" function to extract the "FISCAL_YEAR" data from all objects within the "uhdata" collection. AI has played a significant role in identifying and organizing the different components of the code, enabling me to navigate through it more effectively and minimize errors.
-console.log(fiscalYears);
 
 10. Explaining code
-
+- This code snippet serves as a brief illustration drawn from the experience WODS we engage with independently. Here, I utilized the "pluck" function to extract the "FISCAL_YEAR" data from all objects within the "uhdata" collection. AI has played a significant role in identifying and organizing the different components of the code, enabling me to navigate through it more effectively and minimize errors.
 11. Writing code
-
+- When writing code, I typically begin by outlining the skeleton of the code myself. Then, I leverage AI to evaluate potential improvements to the structure. Additionally, I utilize AI to generate the actual code based on the skeleton I provide. This approach assists me in establishing a strong foundation for my solution and streamlines the coding process.
 12. Documenting code
 
 13. Quality assurance
