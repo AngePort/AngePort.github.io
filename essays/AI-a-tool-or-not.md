@@ -35,7 +35,7 @@ I have used AI in class this semester in the following areas:
 8. Asking or answering a smart-question
 - When it comes to asking smart questions, AI showcases a strong understanding of how to formulate them effectively. It becomes evident that precision in questioning is key, as AI can efficiently address problems when provided with clear and specific inquiries. In my group project, team members often hesitate to rely solely on AI for assistance, as they view it as a last resort when stuck. However, I've found that AI can still be utilized effectively in a different capacity to aid those in need. Rather than expecting it to directly solve complex problems, I employ AI to help identify resources or alternative approaches for problem-solving. This approach prevents the risk of receiving incorrect answers through brute force methods and instead directs us towards more informed solutions.
 9. Coding example e.g. “give an example of using Underscore .pluck”
-```markdown
+<pre lang="javascript">
 var uhdata = [
 {
 "FISCAL_YEAR":2010,
@@ -69,7 +69,7 @@ var uhdata = [
 
 // Extracting FISCAL_YEAR using _.pluck
 var fiscalYears = _.pluck(uhdata, 'FISCAL_YEAR');
-```
+</pre>
 
 10. Explaining code
 - This code snippet serves as a brief illustration drawn from the experience WODS we engage with independently. Here, I utilized the "pluck" function to extract the "FISCAL_YEAR" data from all objects within the "uhdata" collection. AI has played a significant role in identifying and organizing the different components of the code, enabling me to navigate through it more effectively and minimize errors.
