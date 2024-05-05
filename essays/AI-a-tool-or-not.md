@@ -29,11 +29,11 @@ I have used AI in class this semester in the following areas:
 5. Final project
 - For the final project, I've employed AI to address issues that were beyond my comprehension. Tasks like developing our "Special sauce" often demanded extensive brainstorming sessions with the team. However, as students juggling multiple assignments, our time management became a challenge, making it difficult to coordinate meetings at optimal times. Although we scheduled meetings twice a week, the demands of our project's "Special sauce" required more frequent collaboration. AI proved to be invaluable in bridging the gaps by providing assistance and streamlining our thought processes, saving us considerable time and effort.
 6. Learning a concept / tutorial
-
+- When it comes to learning new concepts, I haven't relied on AI. I haven't found it particularly useful in this context. The readings and lectures provided by professors have been quite straightforward and easy to grasp. In fact, I've often found them so comprehensible that I could follow along even while eating. Therefore, I haven't felt the need for AI assistance when it comes to simply understanding new material.
 7. Answering a question in class or in Discord
-
+- When it comes to answering questions in class or on Discord, I've found AI to be quite useful. There's always a sense of curiosity in seeing what a bot might suggest rather than simply resorting to a Google search. Since we're still in the process of understanding AI as a tool, I believe it's beneficial to keep experimenting with it, pushing its capabilities and exploring its potential by applying it to various tasks and questions we encounter. This helps us better understand its limitations and strengths.
 8. Asking or answering a smart-question
-
+- When it comes to asking smart questions, AI showcases a strong understanding of how to formulate them effectively. It becomes evident that precision in questioning is key, as AI can efficiently address problems when provided with clear and specific inquiries. In my group project, team members often hesitate to rely solely on AI for assistance, as they view it as a last resort when stuck. However, I've found that AI can still be utilized effectively in a different capacity to aid those in need. Rather than expecting it to directly solve complex problems, I employ AI to help identify resources or alternative approaches for problem-solving. This approach prevents the risk of receiving incorrect answers through brute force methods and instead directs us towards more informed solutions.
 9. Coding example e.g. “give an example of using Underscore .pluck”
 
 10. Explaining code
