@@ -11,7 +11,9 @@ labels:
   - Learning
   - AI
 ---
-
+<img width="200px"
+class="rounded mx-auto d-block"
+src="../img/AI-reflection/AI-tool.jpeg" >
 ### I. Introduction
 In my academic journey, my professor advocated for the use of AI as a valuable tool, highlighting its potential to enhance our learning and problem-solving abilities. It became evident that AI's effectiveness is directly proportional to our existing knowledge base. However, my experiences with AI, particularly through platforms like ChatGPT, have left me grappling with conflicting emotions. While it undeniably offers swift solutions to queries, it also fosters a sense of dependency that concerns me. There's a temptation to rely on it excessively, undermining the development of my own critical thinking skills. Nevertheless, I acknowledge the profound impact of AI as a groundbreaking invention that demands responsible use. It's essential to treat AI as a tool to be utilized judiciously, supplementing rather than replacing our cognitive capacities.
 
