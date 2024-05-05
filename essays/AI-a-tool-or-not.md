@@ -78,9 +78,9 @@ var fiscalYears = _.pluck(uhdata, 'FISCAL_YEAR');
 12. Documenting code
 - When it comes to documenting code, I find it essential to utilize AI for this task. AI aids in ensuring that my code is well-organized by providing detailed notes and documentation for each section of the code. While I sometimes overlook this step and write code without documenting it, I rely on AI to rectify such oversights. Remarkably, AI consistently accurately identifies the functionality of the code I've written. It appears that documenting code is an area where AI excels and proves to be an invaluable tool.
 13. Quality assurance
-
+- Utilizing AI provides me with a valuable tool for refining and finalizing my work, whether it's an essay or a piece of code. It lends structure and organization to my creations, acting as a versatile Swiss army knife for problem-solving. By efficiently tackling smaller tasks, AI helps to free up time and resources for addressing larger issues. This capability instills a sense of quality assurance for the user, ensuring that the end result meets desired standards.
 14. Other uses in ICS 314 not listed above
-
+- AI has proven instrumental in exploring potential career paths utilizing the skills acquired from this class. I've utilized AI to identify job opportunities that align with the concepts we've learned, such as Meteor, within various companies. However, beyond these specific applications, I've found limited utility for AI in my endeavors.
 
 ### III. Impact on Learning and Understanding:
 
