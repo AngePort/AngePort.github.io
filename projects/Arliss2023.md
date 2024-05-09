@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/Arliss2023/ARLISS2023-students.jpg
 title: "Duel Deployment at Arliss"
-date: 2024
+date: 2023
 published: true
 labels:
   - Rockets
