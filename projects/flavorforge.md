@@ -15,15 +15,18 @@ summary: "FlavorForge aims to transform college students' cooking by offering a 
 # Overview of Project
 FlavorForge is designed to revolutionize the way college students approach cooking. Our platform provides a space where students can easily discover and share recipes that are perfectly suited to their limited resources and dietary preferences. Our goal is to empower students to cook nutritious and tasty meals using minimal kitchen facilities and readily available ingredients near their campus.
 
-<img width="300px"
+#### Recipe List Page
+<img width="600px"
 class="rounded mx-auto d-block"
 src="../img/finalproject/recipelistpage.png" >
 
-<img width="300px"
+#### Recipe List Page Admin
+<img width="600px"
 class="rounded mx-auto d-block"
 src="../img/finalproject/adminpage.png" >
 
-<img width="300px"
+#### Recipe List Page Admin Delete Function
+<img width="600px"
 class="rounded mx-auto d-block"
 src="../img/finalproject/adminpagedelete.png" >
 
