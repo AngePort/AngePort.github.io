@@ -1,15 +1,15 @@
 ---
 layout: project
 type: project
-image: img/Arliss2023/ARLISS2023-students.jpg
-title: "Duel Deployment at Arliss"
-date: 2023
+image: img/finalproject/flavorforgelogo.png
+title: "Flavor Forge"
+date: 2024
 published: true
 labels:
-  - Rockets
-  - Arduino
-  - Payloads  
-summary: "Learning our way though the next project, through testing at the Black Rock Dessert"
+  - Software Engineering
+  - JavaScript
+  - Meteor
+summary: "Competitions that requires strong team building and time management to complete the designed goal."
 ---
 <div class="text-center p-4">
   <img width="500px" 
