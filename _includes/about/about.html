@@ -2,7 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
-        <img width="300px" src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto rounded-circle">
+        <div style="width: 300px; height: 300px; overflow: hidden; border-radius: 20px;">
+          <img width="300px" src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto">
+        </div>
       </div>
       <div class="col-lg-8">
         <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
