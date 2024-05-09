@@ -7,27 +7,58 @@
     "phone": "808-670-5571",
     "website": "https://AngePort.github.io",
     "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Fall, 2025.",
-    "location": { "address": "91-6621 Kapolei Parkway", "postalCode": "96706", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "location": {
+      "address": "91-6621 Kapolei Parkway",
+      "postalCode": "96706",
+      "city": "Honolulu",
+      "countryCode": "USA",
+      "region": "Hawaii"
+    },
     "profiles": [
-      { "network": "github", "username": "AngePort", "url": "http://github.com/AngePort" },
-      { "network": "linkedin", "username": "Angello Portillo", "url": "http://linkedin.com/in/angello-portillo-8299242a9/" }
+      {
+        "network": "github",
+        "username": "AngePort",
+        "url": "http://github.com/AngePort"
+      },
+      {
+        "network": "linkedin",
+        "username": "Angello Portillo",
+        "url": "http://linkedin.com/in/angello-portillo-8299242a9/"
+      }
     ]
   },
   "interests": [
-    { "name": "Computer Programming" },
-    { "name": "SkateBoarding" },
-    { "name": "Sports" },
-    { "name": "Rocketry" },
-    { "name": "Stop Motion Picture" }
+    {
+      "name": "Computer Programming"
+    },
+    {
+      "name": "SkateBoarding"
+    },
+    {
+      "name": "Sports"
+    },
+    {
+      "name": "Rocketry"
+    },
+    {
+      "name": "Stop Motion Picture"
+    }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [  "C++", "Javascript" ]
+      "keywords": [
+        "C++",
+        "Javascript"
+      ]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Windows", "Git/GitHub" ]
+      "keywords": [
+        "MacOS",
+        "Windows",
+        "Git/GitHub"
+      ]
     }
   ],
   "education": [
@@ -50,7 +81,10 @@
       "endDate": "2022",
       "summary": " Working as a barista at Target Starbucks has been an enriching experience filled with growth and learning. Interacting with numerous customers daily has expanded my social network and communication skills significantly. Moreover, the job has taught me valuable lessons in productivity and time management, fostering independence while also emphasizing the importance of teamwork. Through this role, I've honed my ability to work efficiently both independently and as part of a team, making it a rewarding and fulfilling experience overall. "
     }
-  ],
+  ]
+}
+
+/*
   "volunteer": [
     {
       "organization": " ",
@@ -75,3 +109,4 @@
   ]
 
 }
+*/
