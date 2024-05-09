@@ -9,20 +9,23 @@ labels:
   - Software Engineering
   - JavaScript
   - Meteor
-summary: "Competitions that requires strong team building and time management to complete the designed goal."
+summary: "FlavorForge aims to transform college students' cooking by offering a platform for sharing and discovering recipes tailored to their resources and dietary needs, facilitating nutritious and delicious meals with minimal kitchen setups and nearby ingredients."
 ---
-<div class="text-center p-4">
-  <img width="500px" 
-       src="../img/Arliss2023/IMG_4900.jpg" 
-       class="img-thumbnail" >
-  <img width="500px" 
-       src="../img/Arliss2023/IMG_4906.jpg" 
-       class="img-thumbnail" >
-</div>
 
 # Overview of Project
-The project centers around the development of our rocket, with a focus on the avionics bay, which aligns with my area of expertise. Specifically, I've programmed two altimeters: the RRC3 by MissleWorks and the Telemega by AltusMetrum. Both are configured to trigger an event once the rocket reaches apogee, the highest point of its altitude during launch. These events include deploying a drogue parachute approximately 2 seconds after reaching apogee, which serves to stabilize the descent and prevent excessive drift. Subsequently, the final event involves deploying the main parachute when the rocket descends to an altitude of approximately 700-800 feet, ensuring a safe landing.
+FlavorForge is designed to revolutionize the way college students approach cooking. Our platform provides a space where students can easily discover and share recipes that are perfectly suited to their limited resources and dietary preferences. Our goal is to empower students to cook nutritious and tasty meals using minimal kitchen facilities and readily available ingredients near their campus.
+
+<img width="300px"
+class="rounded mx-auto d-block"
+src="../img/finalproject/recipelistpage.png" >
+
+<img width="300px"
+class="rounded mx-auto d-block"
+src="../img/finalproject/adminpage.png" >
+
+<img width="300px"
+class="rounded mx-auto d-block"
+src="../img/finalproject/adminpagedelete.png" >
 
 # My experience
-My experience with this project has been immensely beneficial for my development as both a student and a computer science major. Despite its minimal connection to my technical coding field, it has afforded me the opportunity to enhance my skills in team management, planning, and communication. Presenting our project serves as a foundational step toward participating in the First Nations Launch event scheduled for the spring of 2024.
-Here is the offical link to [First Nations Launch](https://spacegrant.carthage.edu/first-nations-launch/)
+Throughout this project, we learned valuable teamwork and time management skills, establishing a routine schedule to effectively plan and meet project milestones for the successful deployment of "Flavor Forge" by Milestone 3. Despite encountering numerous challenges, including navigating our differing work styles as a newly formed team, we successfully overcame them. My assigned tasks included creating the ListRecipe Page and the Admin List recipe page, enabling users to easily browse recipes and facilitating efficient organization. Additionally, I implemented functionality for the Admin to delete recipes as needed. From milestone 1 to 3, I diligently completed these tasks, ensuring the application functioned as intended.
