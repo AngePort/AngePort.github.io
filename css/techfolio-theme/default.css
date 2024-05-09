@@ -1,4 +1,4 @@
-/* Default theme. Simple, yet elegant. */
+/* Dark theme */
 
 /* Use Open Sans as the default sans serif font. */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
@@ -10,9 +10,9 @@
   --tf-pill-bg: var(--bs-gray);
   --tf-icon-fill: var(--bs-gray);
   --tf-icon-hover: var(--bs-gray-500);
-  --tf-page-bg-color: var(--bs-white);
-  --tf-footer-bg-color: var(--bs-gray-200);
-  --tf-projects-bg-color: var(--bs-gray-100);
+  --tf-page-bg-color: #121212; /* Dark background color */
+  --tf-footer-bg-color: #2b2b2b; /* Darker footer background color */
+  --tf-projects-bg-color: #333; /* Darker projects background color */
 }
 
 /* Format social media icons */
@@ -35,6 +35,6 @@ a {
 
 /* Simplify the styling of the bottom of Essay cards. */
 .card-footer {
-  background-color: var(--bs-white);
+  background-color: var(--tf-footer-bg-color);
   border-top: none;
 }
