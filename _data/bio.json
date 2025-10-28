@@ -3,14 +3,14 @@
     "name": "Angello Portillo",
     "label": "Student",
   "picture": "img/Angello_Portillo.jpg",
-    "email": "angellop@hawaii.edu",
+  "email": "angellot.portillo@gmail.com",
     "phone": "808-670-5571",
     "website": "https://AngePort.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Fall, 2025.",
+  "summary": "Computer Science student at the University of Hawai‘i at Mānoa, graduating Fall 2025 with a strong foundation in software development, network systems, and technical support. Currently serving as an IT Technician for the State of Hawai‘i, where I provide on-site support for secure government networks and troubleshoot hardware and software issues. Passionate about leveraging technology to solve real-world problems and committed to continuous learning in cybersecurity, infrastructure, and system design.",
     "location": {
-      "address": "91-6621 Kapolei Parkway",
+      "address": "Ewa Beach",
       "postalCode": "96706",
-      "city": "Honolulu",
+      "city": "Ewa Beach",
       "countryCode": "USA",
       "region": "Hawaii"
     },
@@ -22,8 +22,8 @@
       },
       {
         "network": "linkedin",
-        "username": "Angello Portillo",
-        "url": "http://linkedin.com/in/angello-portillo-8299242a9/"
+        "username": "angeport",
+        "url": "https://www.linkedin.com/in/angeport"
       }
     ]
   },
@@ -46,67 +46,77 @@
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
+      "name": "Technical",
       "keywords": [
+        "Software Infrastructure",
+        "Technical Support",
+        "Amazon Web Services (AWS)",
         "C++",
-        "Javascript"
-      ]
-    },
-    {
-      "name": "Toolsets/OS",
-      "keywords": [
+        "Javascript",
+        "Git/GitHub",
         "MacOS",
-        "Windows",
-        "Git/GitHub"
+        "Windows"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Fall, 2025)",
-      "studyType": "B.S.",
+      "institution": "University of Hawaii at Manoa",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
       "startDate": "2024",
-      "endDate": "Present",
-      "courses": [
-      ]
+      "endDate": "2025",
+      "courses": []
+    },
+    {
+      "institution": "Farrington High School",
+      "area": "General Education",
+      "studyType": "High School Diploma",
+      "startDate": "2015",
+      "endDate": "2019",
+      "courses": []
     }
   ],
   "work": [
     {
-      "company": "Target",
-      "position": " Starbucks Barista",
-      "website": "https://www.target.com/",
-      "startDate": "2019",
-      "endDate": "2022",
-      "summary": " Working as a barista at Target Starbucks has been an enriching experience filled with growth and learning. Interacting with numerous customers daily has expanded my social network and communication skills significantly. Moreover, the job has taught me valuable lessons in productivity and time management, fostering independence while also emphasizing the importance of teamwork. Through this role, I've honed my ability to work efficiently both independently and as part of a team, making it a rewarding and fulfilling experience overall. "
-    }
-  ]
-}
-
-/*
-  "volunteer": [
-    {
-      "organization": " ",
-      "website": " ",
-      "position": " ",
-      "startDate": " ",
-      "endDate": " ",
-      "summary": " ",
-      "highlights": [
-      ]
+      "company": "State of Hawai'i Department of Labor & Industrial Relations",
+      "position": "Information Technology Technician - Intern",
+      "website": "",
+      "startDate": "2025-09",
+      "endDate": "Present",
+      "summary": "The Hawaii Government IT provides on-site technical support for state offices and agencies across the islands, specializing in the setup and configuration of government-issued computers and secure network systems. Our team designs, deploys, and supervises office networks to ensure reliable connectivity, data protection, and compliance with state IT standards. We offer hands-on troubleshooting for hardware, software, and connectivity issues, and support remote access solutions such as VPNs and inter-office communication platforms. With a focus on responsive service and public sector needs, we help keep Hawaii’s government operations running smoothly and securely."
     },
     {
-      "organization": " ",
-      "website": " ",
-      "position": " ",
-      "startDate": " ",
-      "endDate": " ",
-      "summary": " ",
-      "highlights": [
-      ]
+      "company": "Hawaii Space Grant Consortium",
+      "position": "Lead Avionics Engineer",
+      "website": "",
+      "startDate": "2023-01",
+      "endDate": "2024-06",
+      "summary": "As Team Lead for the Hawaii Space Grant Consortium, I guided a team of interns in designing and launching a NASA-sponsored high-powered rocket aimed at achieving specific flight goals such as target apogee and successful recovery. I was responsible for developing the avionics bay, where I programmed microcontrollers to interface with sensors that measured altitude and controlled the timed deployment of drogue and main parachutes. I also integrated a GPS tracking system to ensure safe and accurate post-flight recovery, while coordinating team efforts and maintaining compliance with NASA’s technical and safety standards throughout the project."
+    },
+    {
+      "company": "AeroPAC (ARLISS)",
+      "position": "Participant / Builder",
+      "website": "",
+      "startDate": "2023-09",
+      "endDate": "2023-10",
+      "summary": "At the ARLISS event with AeroPac, I built and launched my own high-powered rocket, using simulation software to predict its flight path and ensure a safe recovery. It was an incredible hands-on experience—designing, testing, and refining my rocket alongside fellow enthusiasts. I also earned my Level 1 High Power Rocketry Certification from Tripoli."
+    },
+    {
+      "company": "NASA - National Aeronautics and Space Administration",
+      "position": "RockOn Workshop Participant",
+      "website": "",
+      "startDate": "2023-06",
+      "endDate": "2023-07",
+      "summary": "At the ROCK ON NASA Workshop at Wallops, we designed and built custom PCB boards equipped with sensors and an Arduino, programmed to collect flight data. After integrating our payload into a high-powered sounding rocket, we launched it into the upper atmosphere and analyzed the recovered flight data."
+    },
+    {
+      "company": "Target",
+      "position": "Starbucks Barista",
+      "website": "https://www.target.com/",
+      "startDate": "2019-10",
+      "endDate": "2021-05",
+      "summary": "Provided consistent, high-quality customer service at a licensed Starbucks inside Target during the COVID-19 pandemic. Developed teamwork, communication, multitasking, and time management skills while adapting to evolving safety protocols and high-pressure environments."
     }
   ]
-
 }
-*/
