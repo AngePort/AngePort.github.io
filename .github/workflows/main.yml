@@ -43,8 +43,13 @@ jobs:
           TOOL_DIR="${TOOL_CACHE}/Ruby/${RUBY_VERSION}/x64"
 
           # If already installed, exit early
+          echo "RUNNER_TOOL_CACHE='${RUNNER_TOOL_CACHE:-}'"
+          echo "TOOL_CACHE='${TOOL_CACHE}'"
+          echo "TOOL_DIR='${TOOL_DIR}'"
           if [ -f "${TOOL_DIR}.complete" ]; then
             echo "Ruby ${RUBY_VERSION} already installed in toolcache: ${TOOL_DIR}"
+            ls -la "$(dirname "${TOOL_DIR}")" || true
+            ls -la "${TOOL_DIR}" || true
             exit 0
           fi
 
@@ -62,6 +67,8 @@ jobs:
             sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
             sudo mkdir -p "${TOOL_DIR}"
             install_ruby "${TOOL_DIR}"
+            echo "Listing ${TOOL_DIR} after install:"
+            sudo ls -la "${TOOL_DIR}" || true
             sudo touch "${TOOL_DIR}.complete"
           else
             # Fallback: install into RUNNER_TEMP and add to PATH for subsequent steps
@@ -75,10 +82,20 @@ jobs:
               echo "Warning: sudo not available — attempting to build with existing system packages. If build fails, install build deps on the runner."
             fi
             install_ruby "${FALLBACK_DIR}"
+            echo "Listing ${FALLBACK_DIR} after install:"
+            ls -la "${FALLBACK_DIR}" || true
             echo "PATH=${FALLBACK_DIR}/bin:${PATH}" >> "${GITHUB_ENV}"
             echo "RUBY_HOME=${FALLBACK_DIR}" >> "${GITHUB_ENV}"
           fi
+
+      - name: Debug: show PATH and ruby
+        if: contains(runner.labels, 'self-hosted')
+        run: |
+          echo "PATH=${PATH}"
+          echo "Which ruby: $(which ruby || true)"
+          ruby --version || true
       - name: Setup Ruby
+        if: not(contains(runner.labels, 'self-hosted'))
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
           ruby-version: '3.1' # Not needed with a .ruby-version file
