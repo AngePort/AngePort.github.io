@@ -38,19 +38,48 @@ jobs:
         run: |
           set -euo pipefail
           RUBY_VERSION="3.1.4"
-          TOOL_DIR="/opt/hostedtoolcache/Ruby/${RUBY_VERSION}/x64"
+          # Prefer the runner toolcache env if present, otherwise fall back to /opt/hostedtoolcache
+          TOOL_CACHE="${RUNNER_TOOL_CACHE:-/opt/hostedtoolcache}"
+          TOOL_DIR="${TOOL_CACHE}/Ruby/${RUBY_VERSION}/x64"
+
           # If already installed, exit early
           if [ -f "${TOOL_DIR}.complete" ]; then
-            echo "Ruby ${RUBY_VERSION} already installed in toolcache"
+            echo "Ruby ${RUBY_VERSION} already installed in toolcache: ${TOOL_DIR}"
             exit 0
           fi
-          sudo apt-get update
-          sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
-          # Install ruby-build into /tmp and use it to install Ruby into the toolcache path
-          git clone https://github.com/rbenv/ruby-build.git /tmp/ruby-build
-          /tmp/ruby-build/bin/ruby-build "${RUBY_VERSION}" "${TOOL_DIR}"
-          # Mark complete so future runs skip installation
-          sudo touch "${TOOL_DIR}.complete"
+
+          # Helper to install ruby-build and build Ruby
+          install_ruby() {
+            local dest="$1"
+            echo "Installing Ruby ${RUBY_VERSION} into ${dest}"
+            git clone https://github.com/rbenv/ruby-build.git /tmp/ruby-build
+            /tmp/ruby-build/bin/ruby-build "${RUBY_VERSION}" "${dest}"
+          }
+
+          # If we can use sudo and write to TOOL_CACHE, install there (so ruby/setup-ruby can detect it)
+          if command -v sudo >/dev/null 2>&1 && [ -w "$(dirname "${TOOL_DIR}")" ] || [ -w "${TOOL_CACHE}" ]; then
+            echo "Using sudo installation into tool cache (${TOOL_DIR})"
+            sudo apt-get update
+            sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
+            sudo mkdir -p "${TOOL_DIR}"
+            install_ruby "${TOOL_DIR}"
+            sudo touch "${TOOL_DIR}.complete"
+          else
+            # Fallback: install into RUNNER_TEMP and add to PATH for subsequent steps
+            FALLBACK_DIR="${RUNNER_TEMP:-/tmp}/ruby-${RUBY_VERSION}"
+            mkdir -p "${FALLBACK_DIR}"
+            apt_get_cmd=""
+            if command -v sudo >/dev/null 2>&1; then
+              sudo apt-get update
+              sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
+            else
+              echo "Warning: sudo not available — attempting to build with existing system packages. If build fails, install build deps on the runner."
+            fi
+            install_ruby "${FALLBACK_DIR}"
+            # Persist PATH for subsequent steps
+            echo "PATH=${FALLBACK_DIR}/bin:${PATH}" >> "${GITHUB_ENV}"
+            echo "RUBY_HOME=${FALLBACK_DIR}" >> "${GITHUB_ENV}"
+          fi
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
