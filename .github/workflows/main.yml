@@ -33,74 +33,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Ruby on self-hosted runner (if needed)
-        if: ${{ contains(runner.labels, 'self-hosted') }}
-        run: |
-          set -euo pipefail
-          RUBY_VERSION="3.1.4"
-          # Prefer the runner toolcache env if present, otherwise fall back to /opt/hostedtoolcache
-          TOOL_CACHE="${RUNNER_TOOL_CACHE:-/opt/hostedtoolcache}"
-          TOOL_DIR="${TOOL_CACHE}/Ruby/${RUBY_VERSION}/x64"
-
-          # If already installed, exit early
-          echo "RUNNER_TOOL_CACHE='${RUNNER_TOOL_CACHE:-}'"
-          echo "TOOL_CACHE='${TOOL_CACHE}'"
-          echo "TOOL_DIR='${TOOL_DIR}'"
-          if [ -f "${TOOL_DIR}.complete" ]; then
-            echo "Ruby ${RUBY_VERSION} already installed in toolcache: ${TOOL_DIR}"
-            ls -la "$(dirname "${TOOL_DIR}")" || true
-            ls -la "${TOOL_DIR}" || true
-            exit 0
-          fi
-
-          install_ruby() {
-            local dest="$1"
-            echo "Installing Ruby ${RUBY_VERSION} into ${dest}"
-            git clone https://github.com/rbenv/ruby-build.git /tmp/ruby-build
-            /tmp/ruby-build/bin/ruby-build "${RUBY_VERSION}" "${dest}"
-          }
-
-          # If sudo is available and toolcache is writable, install there so ruby/setup-ruby can detect it
-          if command -v sudo >/dev/null 2>&1 && ( [ -w "$(dirname "${TOOL_DIR}")" ] || [ -w "${TOOL_CACHE}" ] ); then
-            echo "Using sudo installation into tool cache (${TOOL_DIR})"
-            sudo apt-get update
-            sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
-            sudo mkdir -p "${TOOL_DIR}"
-            install_ruby "${TOOL_DIR}"
-            echo "Listing ${TOOL_DIR} after install:"
-            sudo ls -la "${TOOL_DIR}" || true
-            sudo touch "${TOOL_DIR}.complete"
-          else
-            # Fallback: install into RUNNER_TEMP and add to PATH for subsequent steps
-            FALLBACK_DIR="${RUNNER_TEMP:-/tmp}/ruby-${RUBY_VERSION}"
-            echo "Falling back to install into ${FALLBACK_DIR} (will add to PATH for this job)"
-            mkdir -p "${FALLBACK_DIR}"
-            if command -v sudo >/dev/null 2>&1; then
-              sudo apt-get update
-              sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
-            else
-              echo "Warning: sudo not available — attempting to build with existing system packages. If build fails, install build deps on the runner."
-            fi
-            install_ruby "${FALLBACK_DIR}"
-            echo "Listing ${FALLBACK_DIR} after install:"
-            ls -la "${FALLBACK_DIR}" || true
-            echo "PATH=${FALLBACK_DIR}/bin:${PATH}" >> "${GITHUB_ENV}"
-            echo "RUBY_HOME=${FALLBACK_DIR}" >> "${GITHUB_ENV}"
-          fi
-
-      - name: "Debug: show PATH and ruby"
-        if: ${{ contains(runner.labels, 'self-hosted') }}
-        run: |
-          echo "PATH=${PATH}"
-          echo "Which ruby: $(which ruby || true)"
-          ruby --version || true
       - name: Setup Ruby
-        if: ${{ !contains(runner.labels, 'self-hosted') }}
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          ruby-version: '3.1.4'
+          bundler-cache: true
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
