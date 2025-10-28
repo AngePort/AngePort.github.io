@@ -33,6 +33,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Ruby on self-hosted runner (if needed)
+        if: contains(runner.labels, 'self-hosted')
+        run: |
+          set -euo pipefail
+          RUBY_VERSION="3.1.4"
+          TOOL_DIR="/opt/hostedtoolcache/Ruby/${RUBY_VERSION}/x64"
+          # If already installed, exit early
+          if [ -f "${TOOL_DIR}.complete" ]; then
+            echo "Ruby ${RUBY_VERSION} already installed in toolcache"
+            exit 0
+          fi
+          sudo apt-get update
+          sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
+          # Install ruby-build into /tmp and use it to install Ruby into the toolcache path
+          git clone https://github.com/rbenv/ruby-build.git /tmp/ruby-build
+          /tmp/ruby-build/bin/ruby-build "${RUBY_VERSION}" "${TOOL_DIR}"
+          # Mark complete so future runs skip installation
+          sudo touch "${TOOL_DIR}.complete"
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
