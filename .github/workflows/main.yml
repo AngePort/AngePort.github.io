@@ -48,7 +48,6 @@ jobs:
             exit 0
           fi
 
-          # Helper to install ruby-build and build Ruby
           install_ruby() {
             local dest="$1"
             echo "Installing Ruby ${RUBY_VERSION} into ${dest}"
@@ -56,8 +55,8 @@ jobs:
             /tmp/ruby-build/bin/ruby-build "${RUBY_VERSION}" "${dest}"
           }
 
-          # If we can use sudo and write to TOOL_CACHE, install there (so ruby/setup-ruby can detect it)
-          if command -v sudo >/dev/null 2>&1 && [ -w "$(dirname "${TOOL_DIR}")" ] || [ -w "${TOOL_CACHE}" ]; then
+          # If sudo is available and toolcache is writable, install there so ruby/setup-ruby can detect it
+          if command -v sudo >/dev/null 2>&1 && ( [ -w "$(dirname "${TOOL_DIR}")" ] || [ -w "${TOOL_CACHE}" ] ); then
             echo "Using sudo installation into tool cache (${TOOL_DIR})"
             sudo apt-get update
             sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
@@ -67,8 +66,8 @@ jobs:
           else
             # Fallback: install into RUNNER_TEMP and add to PATH for subsequent steps
             FALLBACK_DIR="${RUNNER_TEMP:-/tmp}/ruby-${RUBY_VERSION}"
+            echo "Falling back to install into ${FALLBACK_DIR} (will add to PATH for this job)"
             mkdir -p "${FALLBACK_DIR}"
-            apt_get_cmd=""
             if command -v sudo >/dev/null 2>&1; then
               sudo apt-get update
               sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev git wget ca-certificates
@@ -76,7 +75,6 @@ jobs:
               echo "Warning: sudo not available — attempting to build with existing system packages. If build fails, install build deps on the runner."
             fi
             install_ruby "${FALLBACK_DIR}"
-            # Persist PATH for subsequent steps
             echo "PATH=${FALLBACK_DIR}/bin:${PATH}" >> "${GITHUB_ENV}"
             echo "RUBY_HOME=${FALLBACK_DIR}" >> "${GITHUB_ENV}"
           fi
