@@ -1,9 +1,16 @@
-<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
-  <div class="container-fluid">
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <!--<small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small> -->
-      </ul>
+<footer class="tf-footer">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <div>
+      <p class="tf-footer-eyebrow mb-1">{{ site.data.bio.basics.name }} · {{ "now" | date: "%Y" }}</p>
+      <p class="mb-0 small text-muted">Crafted on GitHub Pages + TechFolio · Last refresh {{ site.time | date: "%b %d, %Y" }}</p>
     </div>
+    <div class="tf-footer-links d-flex flex-wrap gap-3 text-center">
+      <a href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
+      <a href="{{ '/#essays' | prepend: site.baseurl }}">Essays</a>
+      <a href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a>
+    </div>
+    {% if site.data.bio.basics.email %}
+      <a class="btn tf-btn-primary" href="mailto:{{ site.data.bio.basics.email }}">Say hello</a>
+    {% endif %}
   </div>
 </footer>

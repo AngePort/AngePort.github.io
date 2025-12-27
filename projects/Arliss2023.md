@@ -14,10 +14,12 @@ summary: "Learning our way though the next project, through testing at the Black
 <div class="text-center p-4">
   <img width="500px" 
        src="../img/Arliss2023/IMG_4900.jpg" 
-       class="img-thumbnail" >
+      class="img-thumbnail"
+      alt="Arliss team preparing dual deployment rocket" >
   <img width="500px" 
        src="../img/Arliss2023/IMG_4906.jpg" 
-       class="img-thumbnail" >
+      class="img-thumbnail"
+      alt="Close-up of avionics bay wiring" >
 </div>
 
 # Overview of Project

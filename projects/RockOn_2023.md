@@ -14,8 +14,9 @@ summary: "A workshop that provides the learner the experience on using the skill
 ---
 
 <img width="500px" 
-     class="rounded mx-auto d-block" 
-     src="../img/2023 rockon/IMG_5063.jpg" >
+  class="rounded mx-auto d-block" 
+  src="../img/2023 rockon/IMG_5063.jpg"
+  alt="RockOn participants assembling payload hardware" >
 
 # Overview
 We got to work with Nasa to provide us a outstanding working enviornment where we are given the chance to expand our network. We were provided with the tools and equipment to help us complete a task that would hone our experience with the field of programming, hardware integration, soldering, and documentation of our work. Safety procedures were improtant throughout the project, due to the fact that the tools and enviornment has a potential to harm us, in understadning we are also provided with the knowledge of basic safety and protective personal equipments. In conclusion we got to create a payload that will be integrated into Nasa's rocket to recieve data such as, altitude, humidity, gyroscopic positions, radiation, and velocity.
