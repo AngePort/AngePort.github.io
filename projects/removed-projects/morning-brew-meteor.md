@@ -3,7 +3,8 @@ layout: project
 type: project
 title: "Morning Brew Meteor"
 date: 2024
-published: true
+published: false
+draft: true
 image: img/projects/morning-brew-meteor-card.svg
 labels:
   - Meteor

@@ -3,7 +3,8 @@ layout: project
 type: project
 title: "Meteor WOD Prep"
 date: 2024
-published: true
+published: false
+draft: true
 image: img/projects/meteor2-wod-prep-card.svg
 labels:
   - JavaScript
