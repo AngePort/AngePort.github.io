@@ -1,12 +1,30 @@
-<header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">{{ site.data.bio.basics.name }}</a>
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <a class="nav-link" href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
-        <a class="nav-link" href="{{ '/#essays' | prepend: site.baseurl }}">Essays</a>
-        <a class="nav-link" href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a>
-      </ul>
-    </div>
+<header class="tf-navbar">
+  <div class="container-fluid d-flex align-items-center gap-3 flex-wrap">
+    <a class="tf-navbar-brand" href="{{ '/' | prepend: site.baseurl }}">
+      <span class="tf-navbar-label">Portfolio</span>
+      <span class="tf-navbar-name">{{ site.data.bio.basics.name }}</span>
+    </a>
+
+    <nav class="tf-navbar-links ms-auto d-flex align-items-center gap-3">
+      <a class="tf-nav-link" href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
+      <a class="tf-nav-link" href="{{ '/#essays' | prepend: site.baseurl }}">Essays</a>
+      <a class="tf-nav-link" href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a>
+    </nav>
+
+    {% if site.data.bio.basics.email %}
+      <a class="btn tf-btn-primary" href="mailto:{{ site.data.bio.basics.email }}">Contact</a>
+    {% endif %}
   </div>
 </header>
+
+<script>
+  (function() {
+    const nav = document.querySelector('.tf-navbar');
+    if (!nav) return;
+    const toggleState = () => {
+      nav.classList.toggle('tf-navbar-scrolled', window.scrollY > 12);
+    };
+    toggleState();
+    window.addEventListener('scroll', toggleState, { passive: true });
+  })();
+</script>

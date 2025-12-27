@@ -12,6 +12,13 @@
   --tf-page-bg-color: var(--bs-white);
   --tf-footer-bg-color: var(--bs-gray-200);
   --tf-projects-bg-color: var(--bs-gray-100);
+  --tf-accent: #f15a24;
+  --tf-accent-dark: #0f172a;
+  --tf-surface: #f7f6f3;
+  --tf-hero-gradient: linear-gradient(135deg, #0f172a 0%, #1b2a52 45%, #f15a24 115%);
+  --tf-card-bg: rgba(255, 255, 255, 0.12);
+  --tf-card-border: rgba(255, 255, 255, 0.25);
+  --tf-shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.35);
 }
 
 /* Format social media icons */
@@ -36,4 +43,392 @@ a {
 .card-footer {
   background-color: var(--bs-white);
   border-top: none;
+}
+
+.tf-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 0;
+  transition: all 0.3s ease;
+}
+
+.tf-navbar-scrolled {
+  padding: 0.5rem 0;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+}
+
+.tf-navbar-brand {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.tf-navbar-label {
+  opacity: 0.65;
+}
+
+.tf-navbar-name {
+  font-size: 1.1rem;
+  letter-spacing: normal;
+}
+
+.tf-navbar-links .tf-nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  position: relative;
+}
+
+.tf-navbar-links .tf-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 2px;
+  background: var(--tf-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.tf-navbar-links .tf-nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.tf-btn-primary {
+  background: var(--tf-accent);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(241, 90, 36, 0.35);
+}
+
+.tf-btn-primary:hover {
+  color: #fff;
+  background: #ff773f;
+}
+
+.tf-btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem;
+}
+
+.tf-btn-ghost:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.tf-btn-ghost-dark {
+  border-color: rgba(15, 23, 42, 0.2);
+  color: var(--tf-accent-dark);
+}
+
+.tf-btn-ghost-dark:hover {
+  border-color: var(--tf-accent-dark);
+  color: var(--tf-accent-dark);
+}
+
+.tf-btn-link {
+  color: var(--tf-accent);
+  font-weight: 600;
+  position: relative;
+}
+
+.tf-btn-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.tf-btn-link:hover::after {
+  transform: scaleX(1);
+}
+
+.tf-hero {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.tf-hero::after {
+  content: "";
+  position: absolute;
+  inset: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  pointer-events: none;
+}
+
+.tf-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.tf-hero-eyebrow,
+.tf-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tf-section-title,
+.tf-hero-title {
+  font-weight: 700;
+}
+
+.tf-hero-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.tf-hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tf-hero-summary {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.tf-hero-interests span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 0 0.5rem 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.tf-hero-social a {
+  margin-right: 0.75rem;
+}
+
+.tf-hero-portrait {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--tf-shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.tf-hero-portrait img {
+  width: 100%;
+  display: block;
+}
+
+.tf-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.tf-hero-stat {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tf-hero-stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: block;
+}
+
+.tf-capabilities {
+  background: var(--tf-surface);
+}
+
+.tf-capabilities-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  height: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+}
+
+.tf-capabilities-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: var(--tf-accent-dark);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.tf-capabilities-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.tf-project-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 40px 70px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.tf-project-card-media {
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tf-project-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.85) 100%);
+}
+
+.tf-project-card-date {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+.tf-project-card-body {
+  padding: 1.75rem;
+}
+
+.tf-project-card-summary {
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.tf-project-card-tags span {
+  display: inline-flex;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(241, 90, 36, 0.1);
+  color: var(--tf-accent);
+  font-size: 0.75rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.tf-project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.75rem 1.75rem;
+}
+
+.tf-essays {
+  background: #fff;
+}
+
+.tf-essay-filter {
+  background: #0f172a;
+  color: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--tf-shadow-soft);
+}
+
+.tf-essay-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.tf-essay-filter-pills button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  border-radius: 999px;
+  color: #fff;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.tf-essay-filter-pills button.active {
+  background: #fff;
+  color: #0f172a;
+}
+
+.tf-essay-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+
+.tf-essay-date {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: var(--tf-accent);
+}
+
+.tf-essay-preview {
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.tf-essay-tags span {
+  display: inline-flex;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  font-size: 0.75rem;
+  margin-right: 0.35rem;
+}
+
+.tf-essay-card footer {
+  margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  .tf-navbar-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .tf-navbar .tf-btn-primary {
+    width: 100%;
+  }
+  .tf-project-card-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
 }

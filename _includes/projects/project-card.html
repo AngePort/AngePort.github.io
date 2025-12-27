@@ -1,23 +1,22 @@
-<div class="card mb-3">
-  <div class="row g-0">
-    <div class="col-sm-6 col-md-4">
-      <img src="{{ site.baseurl }}/{{ include.page.image }}" height="225px" class="rounded-start">
-    </div>
-    <div class="col-sm-6 col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{ include.page.title }} <small class="text-muted float-end">{{ include.page.date }}</small></h5>
-        <p class="card-text">{{ include.page.summary }}</p>
-        <p>
-          {% for label in include.page.labels %}
-          <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
-          {% endfor %}
-        </p>
-        {% if page.projecturl %}
-        <a href="{{ page.projecturl }}" class="btn btn-outline-dark">Project Site</a>
-        {% else %}
-        <a href="{{ site.baseurl}}{{ include.page.url }}" class="btn btn-outline-dark">Read More</a>
-        {% endif %}
-      </div>
+<article class="tf-project-card">
+  <div class="tf-project-card-media" style="background-image: url('{{ site.baseurl }}/{{ include.page.image }}');">
+    <span class="tf-project-card-date">{{ include.page.date }}</span>
+  </div>
+  <div class="tf-project-card-body">
+    <h3>{{ include.page.title }}</h3>
+    <p class="tf-project-card-summary">{{ include.page.summary }}</p>
+    <div class="tf-project-card-tags">
+      {% for label in include.page.labels %}
+        <span>{{ label }}</span>
+      {% endfor %}
     </div>
   </div>
-</div>
+  <div class="tf-project-card-footer">
+    {% if include.page.projecturl %}
+      <a href="{{ include.page.projecturl }}" class="tf-btn-ghost tf-btn-ghost-dark" target="_blank" rel="noopener">Project Site</a>
+    {% else %}
+      <a href="{{ site.baseurl }}{{ include.page.url }}" class="tf-btn-ghost tf-btn-ghost-dark">Read Case Study</a>
+    {% endif %}
+    <a href="{{ site.baseurl }}{{ include.page.url }}" class="tf-btn-link">Details →</a>
+  </div>
+</article>

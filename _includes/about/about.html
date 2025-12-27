@@ -1,49 +1,58 @@
-<div style="background-color: var(--tf-page-bg-color)" class="bg-gradient py-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div style="width: 300px; height: 300px; overflow: hidden; border-radius: 20px;">
-          <img width="300px" src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto">
-        </div>
-      </div>
-      <div class="col-lg-8">
-        <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
-        <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
-        <p class="lead">{{ site.data.bio.basics.summary }}</p>
-        <hr class="my-4">
-        <p class="lead m-0">
-          Interests:
-          {% for interest in site.data.bio.interests %}
-          {{ interest.name }}{% if forloop.last != true %}, {% endif %}
-          {% endfor %}
-        </p>
-        <hr class="my-4">
-        <div class="row">
+<section class="tf-hero" style="background-image: var(--tf-hero-gradient);">
+  <div class="container py-5">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7">
+        <p class="tf-hero-eyebrow">Aerospace systems · State IT reliability · Human-centered automation</p>
+        <h1 class="tf-hero-title">{{ site.data.bio.basics.name }}</h1>
+        <p class="tf-hero-subtitle">{{ site.data.bio.basics.label }}</p>
+        <p class="tf-hero-summary">{{ site.data.bio.basics.summary }}</p>
 
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn tf-btn-primary" href="{{ '/resume.html' | prepend: site.baseurl }}">Download Resume</a>
+          <a class="btn tf-btn-ghost" href="{{ '/#projects' | prepend: site.baseurl }}">View latest missions</a>
+        </div>
+
+        <div class="tf-hero-interests mt-4">
+          {% for interest in site.data.bio.interests %}
+            <span>{{ interest.name }}</span>
+          {% endfor %}
+        </div>
+
+        <div class="tf-hero-social mt-4">
           {% if site.data.bio.basics.website %}
             {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='house' %}
-            </div>
+            {% include about/social.html url=url name='house' %}
           {% endif %}
-
           {% if site.data.bio.basics.email %}
             {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='envelope' %}
-            </div>
+            {% include about/social.html url=url name='envelope' %}
           {% endif %}
-
           {% for profile in site.data.bio.basics.profiles %}
             {% capture url %}{{ profile.url }}{% endcapture %}
             {% capture name %}{{ profile.network | downcase }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name=name %}
-            </div>
+            {% include about/social.html url=url name=name %}
           {% endfor %}
-
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="tf-hero-portrait">
+          <img src="{{ site.data.bio.basics.picture }}" alt="Portrait of {{ site.data.bio.basics.name }}">
+        </div>
+        <div class="tf-hero-stats">
+          <div class="tf-hero-stat">
+            <span class="tf-hero-stat-number">3</span>
+            <span class="tf-hero-stat-label">NASA / ARLISS payload launches supported</span>
+          </div>
+          <div class="tf-hero-stat">
+            <span class="tf-hero-stat-number">150+</span>
+            <span class="tf-hero-stat-label">State of Hawaiʻi IT incidents resolved</span>
+          </div>
+          <div class="tf-hero-stat">
+            <span class="tf-hero-stat-number">24</span>
+            <span class="tf-hero-stat-label">Automation scripts & dashboards shipped</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>

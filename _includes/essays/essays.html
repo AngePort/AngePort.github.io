@@ -1,33 +1,85 @@
-<div style="background-color: var(--bs-white)" class="bg-gradient py-3" id="essays">
-  <div class="container">
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <h1 class="display-4 text-start">Essays</h1>
-      </div>
-    </div>
-
-    <div class="row g-3">
-      {% assign essay_pages = site.pages | where: "type", "essay" | sort: "date" | reverse %}
-      {% for page in essay_pages %}
-        {% unless page.draft %}
-          {% include essays/essay-card.html page=page %}
-        {% endunless %}
-        {% if forloop.index == include.limit %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    {% assign not_draft = 0 %}
-      {% for page in essay_pages %}
-      {% unless page.draft %}
-        {% assign not_draft = not_draft | plus: 1 %}
+{% assign essay_pages = site.pages | where: "type", "essay" | sort: "date" | reverse %}
+{% assign topic_tokens = '' %}
+{% for page in essay_pages %}
+  {% if page.labels %}
+    {% for label in page.labels %}
+      {% assign slug = label | downcase | replace: ' ', '-' %}
+      {% capture needle %}|{{ slug }}::%}
+      {% endcapture %}
+      {% unless topic_tokens contains needle %}
+        {% capture topic_tokens %}{{ topic_tokens }}|{{ slug }}::{{ label }}{% endcapture %}
       {% endunless %}
     {% endfor %}
+  {% endif %}
+{% endfor %}
+{% assign topic_array = topic_tokens | split: '|' %}
 
-    {% if not_draft > include.limit %}
-      <p class="text-center pt-4"><a href="{{ site.baseurl}}/essays/">See all {{ not_draft }} essays</a></p>
-    {% endif %}
-
+<section class="tf-essays" id="essays">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="tf-essay-filter">
+          <p class="tf-eyebrow">Latest essays</p>
+          <h2 class="tf-section-title">Documenting lessons from rockets to reliability runbooks.</h2>
+          <p class="text-muted">Use the quick filters to jump to a topic. Every post includes the practices, metrics, and retro notes recruiters ask about.</p>
+          <div class="tf-essay-filter-pills" role="list">
+            <button type="button" class="active" data-filter="all">All topics</button>
+            {% for topic in topic_array %}
+              {% if topic != '' %}
+                {% assign parts = topic | split: '::' %}
+                {% assign slug = parts[0] %}
+                {% assign label = parts[1] %}
+                <button type="button" data-filter="{{ slug }}">{{ label }}</button>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row g-3" id="tf-essay-grid">
+          {% assign rendered = 0 %}
+          {% for page in essay_pages %}
+            {% unless page.draft %}
+              {% include essays/essay-card.html page=page %}
+              {% assign rendered = rendered | plus: 1 %}
+            {% endunless %}
+            {% if rendered == include.limit %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% assign not_draft = 0 %}
+        {% for page in essay_pages %}
+          {% unless page.draft %}
+            {% assign not_draft = not_draft | plus: 1 %}
+          {% endunless %}
+        {% endfor %}
+        {% if not_draft > include.limit %}
+          <p class="text-center pt-4"><a class="tf-btn-link" href="{{ site.baseurl}}/essays/">See all {{ not_draft }} essays</a></p>
+        {% endif %}
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.tf-essay-filter-pills button');
+    const cards = document.querySelectorAll('.tf-essay-card');
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+        cards.forEach((card) => {
+          const tags = card.dataset.tags || '';
+          if (filter === 'all' || tags.includes(filter)) {
+            card.parentElement.classList.remove('d-none');
+          } else {
+            card.parentElement.classList.add('d-none');
+          }
+        });
+      });
+    });
+  });
+</script>
