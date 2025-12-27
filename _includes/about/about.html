@@ -12,12 +12,6 @@
           <a class="btn tf-btn-ghost" href="{{ '/#projects' | prepend: site.baseurl }}">View latest missions</a>
         </div>
 
-        <div class="tf-hero-interests mt-4">
-          {% for interest in site.data.bio.interests %}
-            <span>{{ interest.name }}</span>
-          {% endfor %}
-        </div>
-
         <div class="tf-hero-social mt-4">
           {% if site.data.bio.basics.website %}
             {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
@@ -54,7 +48,7 @@
         </div>
         <div class="tf-hero-credential" aria-label="Education credential">
           <div class="tf-hero-credential-logo" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b8/University_of_Hawaii_seal.svg" alt="University of Hawaiʻi at Mānoa seal">
+            <img src="{{ '/img/Manoa-Logo.png' | relative_url }}" alt="University of Hawaiʻi at Mānoa seal">
           </div>
           <div class="tf-hero-credential-copy">
             <p class="tf-hero-credential-eyebrow">Education</p>
