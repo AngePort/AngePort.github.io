@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Angello Portillo",
-    "label": "Student",
+    "label": "Project Engineering Intern",
   "picture": "img/AngePort.jpg",
   "email": "angellot.portillo@gmail.com",
     "phone": "808-670-5571",
     "website": "https://AngePort.github.io",
-  "summary": "Computer Science student at the University of Hawai‘i at Mānoa, graduating Fall 2025 with a strong foundation in software development, network systems, and technical support. Currently serving as an IT Technician for the State of Hawai‘i, where I provide on-site support for secure government networks and troubleshoot hardware and software issues. Passionate about leveraging technology to solve real-world problems and committed to continuous learning in cybersecurity, infrastructure, and system design.",
+  "summary": "Project engineering intern delivering secure, cloud-connected systems for Hawai‘i’s Med-QUEST program while modernizing public-sector IT. I blend full-stack development, Azure/AWS infrastructure, and hands-on field support to keep critical services resilient, data-driven, and compliant.",
     "location": {
       "postalCode": "96706",
       "city": "Ewa Beach",
@@ -78,12 +78,20 @@
   ],
   "work": [
     {
+      "company": "Med-QUEST (Hawai‘i DHS)",
+      "position": "Project Engineering Intern",
+      "website": "",
+      "startDate": "2025-12",
+      "endDate": "Present",
+      "summary": "Enhancing the Med-QUEST member services platform by redesigning workflows, integrating secure APIs, and deploying database architectures across Microsoft Entra, Azure, and Oracle services to boost scalability and compliance."
+    },
+    {
       "company": "State of Hawai'i Department of Labor & Industrial Relations",
       "position": "Information Technology Technician - Intern",
       "website": "",
       "startDate": "2025-09",
-      "endDate": "Present",
-      "summary": "The Hawaii Government IT provides on-site technical support for state offices and agencies across the islands, specializing in the setup and configuration of government-issued computers and secure network systems. Our team designs, deploys, and supervises office networks to ensure reliable connectivity, data protection, and compliance with state IT standards. We offer hands-on troubleshooting for hardware, software, and connectivity issues, and support remote access solutions such as VPNs and inter-office communication platforms. With a focus on responsive service and public sector needs, we help keep Hawaii’s government operations running smoothly and securely."
+      "endDate": "2025-12",
+      "summary": "Provided on-site technical support for government-issued hardware, software, and secure networks while maintaining AWS environments that power statewide services."
     },
     {
       "company": "Hawaii Space Grant Consortium",
