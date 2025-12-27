@@ -1,8 +1,37 @@
 <footer class="tf-footer">
+<<<<<<< Updated upstream
   <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
     <div>
       <p class="tf-footer-eyebrow mb-1">{{ site.data.bio.basics.name }} · {{ "now" | date: "%Y" }}</p>
       <p class="mb-0 small text-muted">Crafted on GitHub Pages + TechFolio · Last refresh {{ site.time | date: "%b %d, %Y" }}</p>
+=======
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-7">
+        <p class="tf-footer-title mb-2">Ready to build the next mission?</p>
+        <p class="tf-footer-text mb-0">I fuse aerospace payloads, state IT resiliency, and human-centered automation to keep complex systems reliable.</p>
+        <div class="d-flex flex-wrap gap-3 mt-3">
+          {% if site.data.bio.basics.email %}
+            <a class="btn tf-btn-primary" href="mailto:{{ site.data.bio.basics.email }}">Email {{ site.data.bio.basics.name }}</a>
+          {% endif %}
+          <a class="btn tf-btn-ghost" href="{{ '/resume.html' | prepend: site.baseurl }}">Download resume</a>
+          <a class="btn tf-btn-link" href="{{ '/#projects' | prepend: site.baseurl }}">View projects</a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-lg-end">
+        <div class="tf-footer-cta">
+          <p class="text-uppercase small text-white-50 mb-2">Quick links</p>
+          <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
+            <a class="tf-footer-link" href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
+            <a class="tf-footer-link" href="{{ '/#essays' | prepend: site.baseurl }}">Essays</a>
+            <a class="tf-footer-link" href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a>
+            {% if site.data.bio.basics.website %}
+              <a class="tf-footer-link" href="{{ site.data.bio.basics.website }}" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+>>>>>>> Stashed changes
     </div>
     <div class="tf-footer-links d-flex flex-wrap gap-3 text-center">
       <a href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
