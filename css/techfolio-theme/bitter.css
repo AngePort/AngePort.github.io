@@ -5,6 +5,7 @@
 /* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
 :root {
   --bs-font-sans-serif: "Bitter", sans-serif;
+<<<<<<< Updated upstream
   --bs-link-color: var(--bs-blue);
   --tf-pill-bg: var(--bs-gray);
   --tf-icon-fill: var(--bs-gray);
@@ -18,6 +19,21 @@
   --tf-surface: #f4f7fb;
   --tf-hero-gradient: linear-gradient(135deg, #030b1d 0%, #122040 45%, #1f7aec 115%);
   --tf-card-bg: rgba(7, 16, 35, 0.35);
+=======
+  --bs-link-color: var(--tf-accent);
+  --tf-pill-bg: var(--bs-gray-200);
+  --tf-icon-fill: var(--bs-gray-600);
+  --tf-icon-hover: var(--tf-accent);
+  --tf-page-bg-color: #f5f7fb;
+  --tf-footer-bg-color: #021419;
+  --tf-projects-bg-color: #f2fbf7;
+  --tf-accent: #0caf82;
+  --tf-accent-dark: #052c21;
+  --tf-accent-muted: #d2f3e7;
+  --tf-surface: #edf7f3;
+  --tf-hero-gradient: linear-gradient(135deg, #04121c 0%, #052c24 45%, #0caf82 110%);
+  --tf-card-bg: rgba(4, 18, 28, 0.35);
+>>>>>>> Stashed changes
   --tf-card-border: rgba(255, 255, 255, 0.2);
   --tf-shadow-soft: 0 24px 70px rgba(3, 11, 29, 0.35);
 }
@@ -82,10 +98,17 @@ a {
   letter-spacing: normal;
 }
 
+.tf-navbar-links {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .tf-navbar-links .tf-nav-link {
   color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
   position: relative;
+  padding: 0.25rem 0;
 }
 
 .tf-navbar-links .tf-nav-link::after {
@@ -112,16 +135,20 @@ a {
   font-weight: 600;
   padding: 0.55rem 1.25rem;
   border-radius: 999px;
+<<<<<<< Updated upstream
   box-shadow: 0 14px 32px rgba(31, 122, 236, 0.35);
+=======
+  box-shadow: 0 14px 34px rgba(12, 175, 130, 0.35);
+>>>>>>> Stashed changes
 }
 
 .tf-btn-primary:hover {
   color: #fff;
-  background: #3a8eff;
+  background: #11c58c;
 }
 
 .tf-btn-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.65);
   color: #fff;
   border-radius: 999px;
   padding: 0.55rem 1.25rem;
@@ -133,12 +160,12 @@ a {
 }
 
 .tf-btn-ghost-dark {
-  border-color: rgba(15, 23, 42, 0.15);
+  border-color: rgba(5, 44, 33, 0.25);
   color: var(--tf-accent-dark);
 }
 
 .tf-btn-ghost-dark:hover {
-  border-color: var(--tf-accent-dark);
+  border-color: var(--tf-accent);
   color: var(--tf-accent-dark);
 }
 
@@ -201,8 +228,48 @@ a {
 }
 
 .tf-section-title {
+<<<<<<< Updated upstream
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   margin-bottom: 1rem;
+=======
+  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+.tf-section-lede {
+  color: rgba(15, 23, 42, 0.75);
+  max-width: 44ch;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.tf-accent-link {
+  color: var(--tf-accent);
+  font-weight: 600;
+  position: relative;
+}
+
+.tf-accent-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.tf-accent-link:hover::after {
+  transform: scaleX(1);
+>>>>>>> Stashed changes
 }
 
 .tf-hero-title {
@@ -219,8 +286,12 @@ a {
 .tf-hero-summary {
   font-size: 1.05rem;
   line-height: 1.6;
+<<<<<<< Updated upstream
   margin-bottom: 1.5rem;
   max-width: 42rem;
+=======
+  max-width: 48ch;
+>>>>>>> Stashed changes
 }
 
 .tf-hero-interests span {
@@ -245,18 +316,26 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #fff;
   font-size: 0.85rem;
+<<<<<<< Updated upstream
   transition: background 0.2s ease, border-color 0.2s ease;
+=======
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+>>>>>>> Stashed changes
 }
 
 .tf-hero-social a:hover {
   background: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.4);
+<<<<<<< Updated upstream
 }
 
 .tf-hero-social svg {
   width: 1rem;
   height: 1rem;
   fill: currentColor;
+=======
+  transform: translateY(-2px);
+>>>>>>> Stashed changes
 }
 
 .tf-hero-portrait {
@@ -304,9 +383,19 @@ a {
   height: 100%;
   border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+<<<<<<< Updated upstream
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+=======
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tf-capabilities-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(12, 175, 130, 0.35);
+  box-shadow: 0 25px 55px rgba(5, 44, 33, 0.12);
+>>>>>>> Stashed changes
 }
 
 .tf-capabilities-icon {
@@ -326,6 +415,7 @@ a {
   margin-bottom: 0;
 }
 
+<<<<<<< Updated upstream
 .tf-capabilities-card h3 {
   margin: 0.35rem 0 0.35rem;
   font-size: 1.1rem;
@@ -337,6 +427,10 @@ a {
 
 .tf-capabilities-card ul li {
   margin-bottom: 0.2rem;
+=======
+.tf-projects {
+  background: var(--tf-projects-bg-color);
+>>>>>>> Stashed changes
 }
 
 .tf-project-card {
@@ -347,12 +441,22 @@ a {
   box-shadow: 0 40px 70px rgba(15, 23, 42, 0.12);
   display: flex;
   flex-direction: column;
+<<<<<<< Updated upstream
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tf-project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 45px 80px rgba(15, 23, 42, 0.18);
+=======
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.tf-project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(12, 175, 130, 0.35);
+  box-shadow: 0 32px 65px rgba(5, 44, 33, 0.25);
+>>>>>>> Stashed changes
 }
 
 .tf-project-card-media {
@@ -412,12 +516,24 @@ a {
   flex-wrap: wrap;
 }
 
+.tf-repo-card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tf-repo-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(12, 175, 130, 0.4);
+  box-shadow: 0 20px 45px rgba(5, 44, 33, 0.15);
+}
+
 .tf-essays {
   background: #fff;
 }
 
 .tf-essay-filter {
-  background: #060f24;
+  background: #04231c;
   color: #fff;
   border-radius: 1.5rem;
   padding: 2rem;
@@ -456,6 +572,13 @@ a {
   display: flex;
   flex-direction: column;
   box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tf-essay-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(12, 175, 130, 0.35);
+  box-shadow: 0 28px 60px rgba(5, 44, 33, 0.12);
 }
 
 .tf-essay-date {
@@ -465,9 +588,96 @@ a {
   color: var(--tf-accent);
 }
 
+<<<<<<< Updated upstream
 .tf-essay-card header h3 {
   margin-top: 0.35rem;
   font-size: 1.15rem;
+=======
+.tf-footer {
+  background: var(--tf-footer-bg-color);
+  color: #d7f2e6;
+  padding: 4rem 0 2.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tf-footer-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.4rem;
+}
+
+.tf-footer-title {
+  color: #fff;
+  font-weight: 600;
+}
+
+.tf-footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.tf-footer-cta {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tf-footer-quick-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tf-footer-link,
+.tf-footer-quick-links a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease;
+}
+
+.tf-footer-link:hover,
+.tf-footer-quick-links a:hover {
+  color: #fff;
+}
+
+.tf-footer-meta {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.tf-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tf-footer-bottom-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tf-footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+>>>>>>> Stashed changes
+}
+
+.tf-footer-bottom-links a:hover {
+  color: #fff;
 }
 
 .tf-essay-preview {
@@ -488,40 +698,6 @@ a {
   padding-top: 1rem;
 }
 
-.tf-footer {
-  background: #030a1b;
-  color: #d0d8ed;
-  padding: 3rem 0;
-  margin-top: 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.tf-footer-title {
-  color: #fff;
-  font-weight: 600;
-}
-
-.tf-footer-cta {
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 1rem;
-  padding: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.tf-footer-link {
-  color: rgba(255, 255, 255, 0.75);
-  transition: color 0.2s ease;
-}
-
-.tf-footer-link:hover {
-  color: #fff;
-}
-
-.tf-footer-text {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
-}
-
 @media (max-width: 767px) {
   .tf-navbar-links {
     width: 100%;
@@ -534,6 +710,9 @@ a {
     flex-direction: column;
     gap: 0.75rem;
     align-items: flex-start;
+  }
+  .tf-footer-quick-links {
+    grid-template-columns: 1fr;
   }
 }
 

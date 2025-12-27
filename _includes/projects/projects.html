@@ -1,13 +1,15 @@
-<div style="background-color: var(--tf-projects-bg-color)" class="bg-gradient py-3" id="projects">
-  <div class="container">
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <h1 class="display-4 text-start">Projects</h1>
-      </div>
-      <div class="col-md-6 d-flex align-items-end justify-content-md-end">
-        <p class="text-muted mb-0 text-md-end" style="max-width: 22rem;">
-          New builds ship to <a class="link-light" href="https://github.com/AngePort" target="_blank" rel="noopener">github.com/AngePort</a> first. Feature them here as soon as they reach showcase quality.
+<section class="tf-projects" id="projects">
+  <div class="container py-5">
+    <div class="row gy-3 align-items-center mb-4">
+      <div class="col-lg-8">
+        <p class="tf-eyebrow">Flagship builds</p>
+        <h2 class="tf-section-title mb-2">Projects</h2>
+        <p class="tf-section-lede">
+          New builds ship to <a class="tf-accent-link" href="https://github.com/AngePort" target="_blank" rel="noopener">github.com/AngePort</a> first. The feed below updates once deliverables are recruiter-ready.
         </p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="btn tf-btn-ghost-dark" href="{{ site.baseurl }}/projects/">Browse archive</a>
       </div>
     </div>
 
@@ -31,7 +33,7 @@
     {% endfor %}
 
     {% if not_draft > include.limit %}
-      <p class="text-center pt-4"><a href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a></p>
+      <p class="text-center pt-4"><a class="tf-btn-link" href="{{ site.baseurl }}/projects/">See all {{ not_draft }} projects</a></p>
     {% endif %}
 
     {% assign github_repos = site.data.github_repos | default: empty %}
@@ -39,12 +41,12 @@
       <div class="mt-5 pt-4 border-top">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
           <h2 class="h4 mb-0">Latest on GitHub</h2>
-          <a class="btn btn-outline-light btn-sm" href="https://github.com/AngePort?tab=repositories" target="_blank" rel="noopener">Open GitHub Profile</a>
+          <a class="btn tf-btn-ghost-dark btn-sm" href="https://github.com/AngePort?tab=repositories" target="_blank" rel="noopener">Open GitHub Profile</a>
         </div>
         <div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
           {% for repo in github_repos %}
             <div class="col">
-              <div class="card h-100 shadow-sm">
+              <div class="tf-repo-card card h-100">
                 <div class="card-body">
                   <div class="d-flex justify-content-between align-items-center mb-2 gap-2">
                     <h3 class="h5 mb-0"><a href="{{ repo.url }}" target="_blank" rel="noopener">{{ repo.name }}</a></h3>
@@ -67,4 +69,4 @@
     {% endif %}
 
   </div>
-</div>
+</section>
