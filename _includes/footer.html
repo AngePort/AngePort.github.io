@@ -9,21 +9,40 @@
           {% if site.data.bio.basics.email %}
             <a class="btn tf-btn-primary" href="mailto:{{ site.data.bio.basics.email }}">Email {{ site.data.bio.basics.name }}</a>
           {% endif %}
-          <a class="btn tf-btn-ghost" href="{{ '/resume.html' | prepend: site.baseurl }}">Download resume</a>
+          <a class="btn tf-btn-ghost" href="{{ '/hard_copy_resume/Angello-Portillo Resume 2025 .pdf' | relative_url }}" download="Angello-Portillo-Resume-2025.pdf">Download resume</a>
           <a class="btn tf-btn-link" href="{{ '/#projects' | prepend: site.baseurl }}">Browse projects</a>
         </div>
       </div>
-      <div class="col-lg-5 text-lg-end">
+      <div class="col-lg-5">
         <div class="tf-footer-cta">
-          <p class="text-uppercase small text-white-50 mb-3">Quick links</p>
-          <ul class="tf-footer-quick-links">
-            <li><a href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a></li>
-            <li><a href="{{ '/#essays' | prepend: site.baseurl }}">Essays</a></li>
-            <li><a href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a></li>
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+            <p class="text-uppercase small text-white-50 mb-0">Quick links</p>
+            <span class="badge text-bg-dark bg-opacity-25">Always up to date</span>
+          </div>
+          <div class="tf-footer-quick-links" role="list">
+            <a class="tf-footer-link-card" href="{{ '/#projects' | prepend: site.baseurl }}" role="listitem">
+              <span class="tf-footer-link-label">Projects</span>
+              <span class="tf-footer-link-subtitle">Hardware, data, & ops</span>
+              <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="tf-footer-link-card" href="{{ '/#essays' | prepend: site.baseurl }}" role="listitem">
+              <span class="tf-footer-link-label">Essays</span>
+              <span class="tf-footer-link-subtitle">Retros + playbooks</span>
+              <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="tf-footer-link-card" href="{{ '/resume.html' | prepend: site.baseurl }}" role="listitem">
+              <span class="tf-footer-link-label">Resume</span>
+              <span class="tf-footer-link-subtitle">One sheet for recruiters</span>
+              <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
+            </a>
             {% if site.data.bio.basics.website %}
-              <li><a href="{{ site.data.bio.basics.website }}" target="_blank" rel="noopener">Website</a></li>
+              <a class="tf-footer-link-card" href="{{ site.data.bio.basics.website }}" target="_blank" rel="noopener" role="listitem">
+                <span class="tf-footer-link-label">Site</span>
+                <span class="tf-footer-link-subtitle">Extended portfolio hub</span>
+                <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
+              </a>
             {% endif %}
-          </ul>
+          </div>
           <p class="tf-footer-meta mb-0">Updated {{ site.time | date: "%b %d, %Y" }} · Built with GitHub Pages + TechFolio</p>
         </div>
       </div>
