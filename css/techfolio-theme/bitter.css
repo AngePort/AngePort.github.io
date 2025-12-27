@@ -213,7 +213,14 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.75rem;
+}
+
+.tf-hero-eyebrow {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.tf-eyebrow {
+  color: rgba(4, 18, 28, 0.6);
 }
 
 .tf-section-title,
@@ -557,6 +564,19 @@ section[id] {
   border-radius: 1.5rem;
   padding: 2rem;
   box-shadow: var(--tf-shadow-soft);
+}
+
+.tf-essay-filter .tf-eyebrow {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tf-essay-filter .tf-section-title {
+  color: #fff;
+}
+
+.tf-essay-filter .tf-section-lede,
+.tf-essay-filter .text-muted {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .tf-essay-filter-pills {
