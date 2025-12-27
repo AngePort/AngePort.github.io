@@ -2,15 +2,15 @@
   <div class="container">
     <div class="row gy-5 align-items-center">
       <div class="col-lg-7">
-        <p class="tf-footer-eyebrow">{{ site.data.bio.basics.name }} · {{ "now" | date: "%Y" }}</p>
-        <h3 class="tf-footer-title mb-2">Let's launch dependable missions together.</h3>
-        <p class="tf-footer-text">{{ site.data.bio.basics.summary }}</p>
+        <p class="tf-footer-eyebrow">Portfolio · {{ "now" | date: "%Y" }}</p>
+        <h3 class="tf-footer-title mb-2">Thanks for visiting {{ site.data.bio.basics.name }}'s workbench.</h3>
+        <p class="tf-footer-text">This space collects the projects, essays, and resume snapshots that showcase my work as a {{ site.data.bio.basics.label }}.</p>
         <div class="d-flex flex-wrap gap-3 mt-3">
           {% if site.data.bio.basics.email %}
             <a class="btn tf-btn-primary" href="mailto:{{ site.data.bio.basics.email }}">Email {{ site.data.bio.basics.name }}</a>
           {% endif %}
           <a class="btn tf-btn-ghost" href="{{ '/resume.html' | prepend: site.baseurl }}">Download resume</a>
-          <a class="btn tf-btn-link" href="{{ '/#projects' | prepend: site.baseurl }}">View projects</a>
+          <a class="btn tf-btn-link" href="{{ '/#projects' | prepend: site.baseurl }}">Browse projects</a>
         </div>
       </div>
       <div class="col-lg-5 text-lg-end">
@@ -24,12 +24,10 @@
               <li><a href="{{ site.data.bio.basics.website }}" target="_blank" rel="noopener">Website</a></li>
             {% endif %}
           </ul>
-          <p class="tf-footer-meta mb-0">Crafted on GitHub Pages + TechFolio · Last refresh {{ site.time | date: "%b %d, %Y" }}</p>
+          <p class="tf-footer-meta mb-0">Updated {{ site.time | date: "%b %d, %Y" }} · Built with GitHub Pages + TechFolio</p>
         </div>
       </div>
     </div>
-<<<<<<< Updated upstream
-=======
     <div class="tf-footer-bottom">
       <p class="tf-footer-text mb-0">© {{ "now" | date: "%Y" }} {{ site.data.bio.basics.name }}. All rights reserved.</p>
       <div class="tf-footer-bottom-links">
@@ -38,6 +36,5 @@
         <a href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a>
       </div>
     </div>
->>>>>>> Stashed changes
   </div>
 </footer>

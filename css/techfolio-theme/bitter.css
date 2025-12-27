@@ -5,21 +5,6 @@
 /* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
 :root {
   --bs-font-sans-serif: "Bitter", sans-serif;
-<<<<<<< Updated upstream
-  --bs-link-color: var(--bs-blue);
-  --tf-pill-bg: var(--bs-gray);
-  --tf-icon-fill: var(--bs-gray);
-  --tf-icon-hover: var(--bs-gray-500);
-  --tf-page-bg-color: var(--bs-white);
-  --tf-footer-bg-color: var(--bs-gray-200);
-  --tf-projects-bg-color: var(--bs-gray-100);
-  --tf-accent: #1f7aec;
-  --tf-accent-dark: #0c1b3a;
-  --tf-accent-muted: #d6e8ff;
-  --tf-surface: #f4f7fb;
-  --tf-hero-gradient: linear-gradient(135deg, #030b1d 0%, #122040 45%, #1f7aec 115%);
-  --tf-card-bg: rgba(7, 16, 35, 0.35);
-=======
   --bs-link-color: var(--tf-accent);
   --tf-pill-bg: var(--bs-gray-200);
   --tf-icon-fill: var(--bs-gray-600);
@@ -33,7 +18,6 @@
   --tf-surface: #edf7f3;
   --tf-hero-gradient: linear-gradient(135deg, #04121c 0%, #052c24 45%, #0caf82 110%);
   --tf-card-bg: rgba(4, 18, 28, 0.35);
->>>>>>> Stashed changes
   --tf-card-border: rgba(255, 255, 255, 0.2);
   --tf-shadow-soft: 0 24px 70px rgba(3, 11, 29, 0.35);
 }
@@ -43,7 +27,7 @@
   display: inline-block;
   fill: var(--tf-icon-fill);
   height: 1.5em;
-  vertical-align: -.1em;
+  vertical-align: -0.1em;
   width: 1.5em;
   transition: 0.2s;
 }
@@ -135,11 +119,7 @@ a {
   font-weight: 600;
   padding: 0.55rem 1.25rem;
   border-radius: 999px;
-<<<<<<< Updated upstream
-  box-shadow: 0 14px 32px rgba(31, 122, 236, 0.35);
-=======
   box-shadow: 0 14px 34px rgba(12, 175, 130, 0.35);
->>>>>>> Stashed changes
 }
 
 .tf-btn-primary:hover {
@@ -228,10 +208,6 @@ a {
 }
 
 .tf-section-title {
-<<<<<<< Updated upstream
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  margin-bottom: 1rem;
-=======
   font-size: clamp(1.65rem, 2.8vw, 2.35rem);
   line-height: 1.25;
   margin-bottom: 0.25rem;
@@ -269,7 +245,6 @@ section[id] {
 
 .tf-accent-link:hover::after {
   transform: scaleX(1);
->>>>>>> Stashed changes
 }
 
 .tf-hero-title {
@@ -286,12 +261,8 @@ section[id] {
 .tf-hero-summary {
   font-size: 1.05rem;
   line-height: 1.6;
-<<<<<<< Updated upstream
-  margin-bottom: 1.5rem;
-  max-width: 42rem;
-=======
+  margin-bottom: 1.25rem;
   max-width: 48ch;
->>>>>>> Stashed changes
 }
 
 .tf-hero-interests span {
@@ -316,26 +287,19 @@ section[id] {
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #fff;
   font-size: 0.85rem;
-<<<<<<< Updated upstream
-  transition: background 0.2s ease, border-color 0.2s ease;
-=======
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
->>>>>>> Stashed changes
 }
 
 .tf-hero-social a:hover {
   background: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.4);
-<<<<<<< Updated upstream
+  transform: translateY(-2px);
 }
 
 .tf-hero-social svg {
   width: 1rem;
   height: 1rem;
   fill: currentColor;
-=======
-  transform: translateY(-2px);
->>>>>>> Stashed changes
 }
 
 .tf-hero-portrait {
@@ -356,7 +320,6 @@ section[id] {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0.75rem;
   margin-top: 1.5rem;
-  text-align: left;
 }
 
 .tf-hero-stat {
@@ -383,11 +346,9 @@ section[id] {
   height: 100%;
   border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
-<<<<<<< Updated upstream
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-=======
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -395,7 +356,6 @@ section[id] {
   transform: translateY(-6px);
   border-color: rgba(12, 175, 130, 0.35);
   box-shadow: 0 25px 55px rgba(5, 44, 33, 0.12);
->>>>>>> Stashed changes
 }
 
 .tf-capabilities-icon {
@@ -415,7 +375,6 @@ section[id] {
   margin-bottom: 0;
 }
 
-<<<<<<< Updated upstream
 .tf-capabilities-card h3 {
   margin: 0.35rem 0 0.35rem;
   font-size: 1.1rem;
@@ -427,10 +386,10 @@ section[id] {
 
 .tf-capabilities-card ul li {
   margin-bottom: 0.2rem;
-=======
+}
+
 .tf-projects {
   background: var(--tf-projects-bg-color);
->>>>>>> Stashed changes
 }
 
 .tf-project-card {
@@ -441,14 +400,6 @@ section[id] {
   box-shadow: 0 40px 70px rgba(15, 23, 42, 0.12);
   display: flex;
   flex-direction: column;
-<<<<<<< Updated upstream
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.tf-project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 45px 80px rgba(15, 23, 42, 0.18);
-=======
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
@@ -456,7 +407,6 @@ section[id] {
   transform: translateY(-8px);
   border-color: rgba(12, 175, 130, 0.35);
   box-shadow: 0 32px 65px rgba(5, 44, 33, 0.25);
->>>>>>> Stashed changes
 }
 
 .tf-project-card-media {
@@ -588,11 +538,29 @@ section[id] {
   color: var(--tf-accent);
 }
 
-<<<<<<< Updated upstream
 .tf-essay-card header h3 {
   margin-top: 0.35rem;
   font-size: 1.15rem;
-=======
+}
+
+.tf-essay-preview {
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.tf-essay-tags span {
+  display: inline-flex;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  font-size: 0.75rem;
+  margin-right: 0.35rem;
+}
+
+.tf-essay-card footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
 .tf-footer {
   background: var(--tf-footer-bg-color);
   color: #d7f2e6;
@@ -673,29 +641,10 @@ section[id] {
 .tf-footer-bottom-links a {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
->>>>>>> Stashed changes
 }
 
 .tf-footer-bottom-links a:hover {
   color: #fff;
-}
-
-.tf-essay-preview {
-  color: rgba(15, 23, 42, 0.75);
-}
-
-.tf-essay-tags span {
-  display: inline-flex;
-  padding: 0.2rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.08);
-  font-size: 0.75rem;
-  margin-right: 0.35rem;
-}
-
-.tf-essay-card footer {
-  margin-top: auto;
-  padding-top: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -717,30 +666,7 @@ section[id] {
 }
 
 @media (max-width: 991px) {
-  .tf-navbar {
-    position: sticky;
-  }
-  .tf-hero {
-    text-align: center;
-  }
-  .tf-hero .d-flex {
-    justify-content: center;
-  }
-  .tf-hero-social {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .tf-hero-portrait {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .tf-hero-stats {
-    text-align: center;
-  }
-  .tf-project-card-body,
-  .tf-project-card-footer {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+  .tf-navbar-brand {
+    flex: 1 0 100%;
   }
 }
