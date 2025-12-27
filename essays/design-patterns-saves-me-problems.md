@@ -26,7 +26,7 @@ In the realm of computer science, the journey from rookie to a well rounded prog
 <img width="200px"
 class="rounded mx-auto d-block"
 src="../img/design-patterns-saves-me-problems/problem-questions1.png"
-alt="Problem solving graphic with question marks">
+alt="Problem-solving graphic filled with question marks">
 
 As I ventured deeper into the world of programming and collaborated with my team on various projects, I refined my problem-solving skills. When faced with challenging coding tasks, I didn't let frustration take over. Instead, I approached the problems systematically, breaking them down into manageable parts. I relied on resources like Stack Overflow to guide me through intricate issues. One memorable instance of this approach was when I encountered a particularly tough coding challenge. By carefully crafting implementations and testing each step along the way, I ensured accuracy and efficiency in my solutions. This methodical approach not only helped me overcome specific challenges but also instilled in me a disciplined problem-solving mindset crucial for navigating the complexities of software development.
 

@@ -13,7 +13,7 @@ labels:
 <img width="200px"
 class="rounded mx-auto d-block"
 src="../img/onestepcloser/toolbox.jpeg"
-alt="Toolbox illustration representing new skills">
+alt="Toolbox illustration representing newly gained skills">
 ### What I took with me
 This semester has been both challenging and enlightening, offering a wealth of new knowledge and fostering connections with like-minded peers sharing similar goals. As I reflect on what I've found most valuable to my learning journey, two key aspects stand out: the development environments I've become accustomed to and the agile project management principles I aim to further refine.
 
@@ -28,7 +28,7 @@ In a computer science major, Integrated Development Environments (IDEs) are esse
 <img width="200px"
 class="rounded mx-auto d-block"
 src="../img/onestepcloser/team.jpeg"
-alt="Team collaboration photo during project planning">
+alt="Student team collaborating during project planning">
 
 ### Exercising a team
 

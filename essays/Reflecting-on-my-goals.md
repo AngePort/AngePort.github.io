@@ -14,7 +14,7 @@ labels:
 <img width="200px"
 class="rounded mx-auto d-block"
 src="../img/Reflection-on-my-goals/Reflection-Goals.jpg"
-alt="Notebook with reflection goals checklist">
+alt="Bullet journal spread outlining reflection goals">
 
 ## Looking at my "smart goals" that I have created.
 
@@ -29,6 +29,6 @@ alt="Notebook with reflection goals checklist">
 <img width="200px"
 class="rounded mx-auto d-block"
 src="../img/Reflection-on-my-goals/Checklist.jpg"
-alt="Checklist graphic emphasizing progress tracking">
+alt="Checklist graphic emphasizing smart-goal progress">
 
 When reflecting on what I wanted to accomplish during this semester, my aim was to develop a good understanding of the software and tools that we were going to learn, and to establish strong connections with the people around me. As we are now in the 7th week of the semester, I can confidently say that I am on the right track to achieving my goals as a scholar and a learner in this field of science. I have engaged in hands-on exercises that have enhanced my understanding of software engineering, and I have enjoyed networking with my peers. Through collaboration, I have not only gained valuable experience but also formed new friendships with individuals who share interests in computer science and other hobbies. Reflecting on my progress, I am pleased with how far I have come in relation to my initial goals.

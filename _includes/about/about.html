@@ -21,16 +21,16 @@
         <div class="tf-hero-social mt-4">
           {% if site.data.bio.basics.website %}
             {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-            {% include about/social.html url=url name='house' %}
+            {% include about/social.html url=url name='house' label='Site' %}
           {% endif %}
           {% if site.data.bio.basics.email %}
             {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
-            {% include about/social.html url=url name='envelope' %}
+            {% include about/social.html url=url name='envelope' label='Email' %}
           {% endif %}
           {% for profile in site.data.bio.basics.profiles %}
             {% capture url %}{{ profile.url }}{% endcapture %}
             {% capture name %}{{ profile.network | downcase }}{% endcapture %}
-            {% include about/social.html url=url name=name %}
+            {% include about/social.html url=url name=name label=profile.network %}
           {% endfor %}
         </div>
       </div>

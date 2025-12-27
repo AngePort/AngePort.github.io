@@ -14,7 +14,7 @@ labels:
 <img width="200px"
 class="rounded mx-auto d-block"
 src="../img/Reflection-on-my-goals/Striving image.jpg"
-alt="Illustration of a student striving to reach smart goals">
+alt="Poster showing a student striving toward SMART goals">
 
 1) I want to accomplish learning about softwares and how software engineering differs from programming. I will know that I reached this goal when I have created a software or worked with them till it is completed. This is attainable through this class. Its relevant due to the fact that I want to pursue a degree in computer science. Achieved hopefully after this class.
 
@@ -31,7 +31,7 @@ Reflecting on my first SMART goal, I embarked on a journey to deepen my understa
 <img width="200px"
 class="rounded mx-auto d-block"
 src="../img/Reflection-on-my-goals/Intellij.jpg"
-alt="Screenshot highlighting IntelliJ IDEA workspace">
+alt="Screenshot highlighting the IntelliJ IDEA workspace">
 
 <img width="200px"
 class="rounded mx-auto d-block"

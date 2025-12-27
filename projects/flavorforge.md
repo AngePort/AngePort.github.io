@@ -17,15 +17,15 @@ FlavorForge is designed to revolutionize the way college students approach cooki
 
 #### Recipe List Page
 
-<img width="600px" class="rounded mx-auto d-block" src="../img/finalproject/recipelistpage.png" style="border: 2px solid black;" alt="Flavor Forge recipe list page interface">
+<img width="600px" class="rounded mx-auto d-block" src="../img/finalproject/recipelistpage.png" style="border: 2px solid black;" alt="FlavorForge recipe list page screenshot">
 
 
 #### Recipe List Page Admin
-<img width="600px" class="rounded mx-auto d-block" src="../img/finalproject/adminpage.png" style="border: 2px solid black;" alt="Admin recipe list view showing moderation tools">
+<img width="600px" class="rounded mx-auto d-block" src="../img/finalproject/adminpage.png" style="border: 2px solid black;" alt="FlavorForge admin recipe list page">
 
 
 #### Recipe List Page Admin Delete Function
-<img width="600px" class="rounded mx-auto d-block" src="../img/finalproject/adminpagedelete.png" style="border: 2px solid black;" alt="Admin delete confirmation dialog for Flavor Forge recipes">
+<img width="600px" class="rounded mx-auto d-block" src="../img/finalproject/adminpagedelete.png" style="border: 2px solid black;" alt="Admin deleting recipes in FlavorForge UI">
 
 
 # My experience

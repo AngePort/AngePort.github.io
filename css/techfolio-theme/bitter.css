@@ -12,13 +12,14 @@
   --tf-page-bg-color: var(--bs-white);
   --tf-footer-bg-color: var(--bs-gray-200);
   --tf-projects-bg-color: var(--bs-gray-100);
-  --tf-accent: #f15a24;
-  --tf-accent-dark: #0f172a;
-  --tf-surface: #f7f6f3;
-  --tf-hero-gradient: linear-gradient(135deg, #0f172a 0%, #1b2a52 45%, #f15a24 115%);
-  --tf-card-bg: rgba(255, 255, 255, 0.12);
-  --tf-card-border: rgba(255, 255, 255, 0.25);
-  --tf-shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.35);
+  --tf-accent: #1f7aec;
+  --tf-accent-dark: #0c1b3a;
+  --tf-accent-muted: #d6e8ff;
+  --tf-surface: #f4f7fb;
+  --tf-hero-gradient: linear-gradient(135deg, #030b1d 0%, #122040 45%, #1f7aec 115%);
+  --tf-card-bg: rgba(7, 16, 35, 0.35);
+  --tf-card-border: rgba(255, 255, 255, 0.2);
+  --tf-shadow-soft: 0 24px 70px rgba(3, 11, 29, 0.35);
 }
 
 /* Format social media icons */
@@ -49,8 +50,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(14px);
+  background: rgba(5, 11, 26, 0.82);
+  backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 0.85rem 0;
   transition: all 0.3s ease;
@@ -58,8 +59,8 @@ a {
 
 .tf-navbar-scrolled {
   padding: 0.5rem 0;
-  background: rgba(15, 23, 42, 0.9);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+  background: rgba(3, 11, 29, 0.95);
+  box-shadow: 0 10px 30px rgba(3, 11, 29, 0.35);
 }
 
 .tf-navbar-brand {
@@ -111,12 +112,12 @@ a {
   font-weight: 600;
   padding: 0.55rem 1.25rem;
   border-radius: 999px;
-  box-shadow: 0 10px 25px rgba(241, 90, 36, 0.35);
+  box-shadow: 0 14px 32px rgba(31, 122, 236, 0.35);
 }
 
 .tf-btn-primary:hover {
   color: #fff;
-  background: #ff773f;
+  background: #3a8eff;
 }
 
 .tf-btn-ghost {
@@ -132,7 +133,7 @@ a {
 }
 
 .tf-btn-ghost-dark {
-  border-color: rgba(15, 23, 42, 0.2);
+  border-color: rgba(15, 23, 42, 0.15);
   color: var(--tf-accent-dark);
 }
 
@@ -168,6 +169,8 @@ a {
   color: #fff;
   position: relative;
   overflow: hidden;
+  background: var(--tf-hero-gradient);
+  border-radius: 2rem;
 }
 
 .tf-hero::after {
@@ -236,15 +239,24 @@ a {
   gap: 0.35rem;
   margin: 0 0.75rem 0.75rem 0;
   font-weight: 500;
-  padding: 0.35rem 0.85rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: #fff;
+  font-size: 0.85rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.tf-hero-social a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .tf-hero-social svg {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
 }
 
 .tf-hero-portrait {
@@ -328,7 +340,7 @@ a {
 }
 
 .tf-project-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 1.25rem;
   overflow: hidden;
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -385,7 +397,7 @@ a {
   display: inline-flex;
   padding: 0.25rem 0.85rem;
   border-radius: 999px;
-  background: rgba(241, 90, 36, 0.1);
+  background: var(--tf-accent-muted);
   color: var(--tf-accent);
   font-size: 0.75rem;
   margin: 0 0.5rem 0.5rem 0;
@@ -405,7 +417,7 @@ a {
 }
 
 .tf-essay-filter {
-  background: #0f172a;
+  background: #060f24;
   color: #fff;
   border-radius: 1.5rem;
   padding: 2rem;
@@ -432,6 +444,7 @@ a {
 .tf-essay-filter-pills button.active {
   background: #fff;
   color: #0f172a;
+  border-color: #fff;
 }
 
 .tf-essay-card {
@@ -473,6 +486,40 @@ a {
 .tf-essay-card footer {
   margin-top: auto;
   padding-top: 1rem;
+}
+
+.tf-footer {
+  background: #030a1b;
+  color: #d0d8ed;
+  padding: 3rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tf-footer-title {
+  color: #fff;
+  font-weight: 600;
+}
+
+.tf-footer-cta {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tf-footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s ease;
+}
+
+.tf-footer-link:hover {
+  color: #fff;
+}
+
+.tf-footer-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
 }
 
 @media (max-width: 767px) {
