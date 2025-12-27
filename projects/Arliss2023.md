@@ -12,12 +12,14 @@ labels:
 summary: "Learning our way though the next project, through testing at the Black Rock Dessert"
 ---
 <div class="text-center p-4">
-  <img width="500px" 
-       src="../img/Arliss2023/IMG_4900.jpg" 
-       class="img-thumbnail" >
-  <img width="500px" 
-       src="../img/Arliss2023/IMG_4906.jpg" 
-       class="img-thumbnail" >
+    <img width="500px" 
+      src="../img/Arliss2023/IMG_4900.jpg" 
+      class="img-thumbnail"
+      alt="Arliss 2023 rocket preparation on launch rail">
+    <img width="500px" 
+      src="../img/Arliss2023/IMG_4906.jpg" 
+      class="img-thumbnail"
+      alt="Team testing avionics bay before flight">
 </div>
 
 # Overview of Project

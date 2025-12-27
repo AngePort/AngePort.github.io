@@ -197,6 +197,11 @@ a {
   font-weight: 700;
 }
 
+.tf-section-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
 .tf-hero-title {
   font-size: clamp(2rem, 4vw, 3.5rem);
   margin-bottom: 0.5rem;
@@ -205,11 +210,14 @@ a {
 .tf-hero-subtitle {
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.5rem;
 }
 
 .tf-hero-summary {
   font-size: 1.05rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 42rem;
 }
 
 .tf-hero-interests span {
@@ -223,7 +231,20 @@ a {
 }
 
 .tf-hero-social a {
-  margin-right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0.75rem 0.75rem 0;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.tf-hero-social svg {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .tf-hero-portrait {
@@ -244,6 +265,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0.75rem;
   margin-top: 1.5rem;
+  text-align: left;
 }
 
 .tf-hero-stat {
@@ -270,6 +292,9 @@ a {
   height: 100%;
   border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .tf-capabilities-icon {
@@ -289,6 +314,19 @@ a {
   margin-bottom: 0;
 }
 
+.tf-capabilities-card h3 {
+  margin: 0.35rem 0 0.35rem;
+  font-size: 1.1rem;
+}
+
+.tf-capabilities-card p {
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.tf-capabilities-card ul li {
+  margin-bottom: 0.2rem;
+}
+
 .tf-project-card {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 1.25rem;
@@ -297,6 +335,12 @@ a {
   box-shadow: 0 40px 70px rgba(15, 23, 42, 0.12);
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tf-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 45px 80px rgba(15, 23, 42, 0.18);
 }
 
 .tf-project-card-media {
@@ -329,6 +373,10 @@ a {
   padding: 1.75rem;
 }
 
+.tf-project-card-body h3 {
+  margin-bottom: 0.75rem;
+}
+
 .tf-project-card-summary {
   color: rgba(15, 23, 42, 0.75);
 }
@@ -348,6 +396,8 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 1.75rem 1.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .tf-essays {
@@ -376,6 +426,7 @@ a {
   color: #fff;
   padding: 0.35rem 0.9rem;
   font-size: 0.85rem;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .tf-essay-filter-pills button.active {
@@ -401,6 +452,11 @@ a {
   color: var(--tf-accent);
 }
 
+.tf-essay-card header h3 {
+  margin-top: 0.35rem;
+  font-size: 1.15rem;
+}
+
 .tf-essay-preview {
   color: rgba(15, 23, 42, 0.75);
 }
@@ -416,6 +472,7 @@ a {
 
 .tf-essay-card footer {
   margin-top: auto;
+  padding-top: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -430,5 +487,34 @@ a {
     flex-direction: column;
     gap: 0.75rem;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 991px) {
+  .tf-navbar {
+    position: sticky;
+  }
+  .tf-hero {
+    text-align: center;
+  }
+  .tf-hero .d-flex {
+    justify-content: center;
+  }
+  .tf-hero-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .tf-hero-portrait {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .tf-hero-stats {
+    text-align: center;
+  }
+  .tf-project-card-body,
+  .tf-project-card-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
