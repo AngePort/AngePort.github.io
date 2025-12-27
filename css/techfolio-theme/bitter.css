@@ -22,6 +22,20 @@
   --tf-shadow-soft: 0 24px 70px rgba(3, 11, 29, 0.35);
 }
 
+body {
+  background: var(--tf-page-bg-color);
+  color: #04121c;
+  line-height: 1.6;
+}
+
+body > section {
+  margin-top: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+body > section:first-of-type {
+  margin-top: 1.5rem;
+}
+
 /* Format social media icons */
 .tf-social {
   display: inline-block;
@@ -211,6 +225,7 @@ a {
   font-size: clamp(1.65rem, 2.8vw, 2.35rem);
   line-height: 1.25;
   margin-bottom: 0.25rem;
+  color: #04121c;
 }
 
 section[id] {
@@ -221,7 +236,9 @@ section[id] {
   color: rgba(15, 23, 42, 0.75);
   max-width: 44ch;
   margin-bottom: 0;
+  margin-top: 0.85rem;
   font-size: 1rem;
+  line-height: 1.65;
 }
 
 .tf-accent-link {
@@ -248,19 +265,20 @@ section[id] {
 }
 
 .tf-hero-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.85rem, 3.4vw, 3rem);
   margin-bottom: 0.5rem;
 }
 
 .tf-hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0.5rem;
 }
 
 .tf-hero-summary {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1.25rem;
   max-width: 48ch;
 }
@@ -330,7 +348,7 @@ section[id] {
 }
 
 .tf-hero-stat-number {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   display: block;
 }
