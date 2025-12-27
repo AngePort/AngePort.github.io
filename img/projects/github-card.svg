@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="GitHub project cover">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#1b263b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="100%" stop-color="#36d399" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" rx="32" />
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="420" height="420" rx="24" fill="#0b2845" stroke="#1f6feb" stroke-width="4" opacity="0.6" />
+    <rect x="520" y="-40" width="760" height="500" rx="32" fill="#0b2845" opacity="0.45" />
+    <path d="M180 120c-44 0-80 36-80 80s36 80 80 80 80-36 80-80-36-80-80-80zm0 40c22 0 40 18 40 40s-18 40-40 40-40-18-40-40 18-40 40-40z" fill="#58a6ff" opacity="0.8" />
+    <circle cx="180" cy="200" r="140" stroke="#58a6ff" stroke-width="6" fill="none" opacity="0.3" />
+  </g>
+  <text x="640" y="360" fill="#9fb3c8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" letter-spacing="4">LATEST BUILDS</text>
+  <text x="640" y="440" fill="#ffffff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="96" font-weight="700">GitHub Projects</text>
+  <text x="640" y="520" fill="#9fb3c8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="38">by Angello Portillo</text>
+  <rect x="640" y="560" width="520" height="6" fill="url(#accent)" rx="3" />
+  <text x="640" y="640" fill="#9fb3c8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="34">Full-stack experiments, automation tools, and rocket ops dashboards.</text>
+</svg>

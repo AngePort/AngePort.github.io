@@ -4,6 +4,11 @@
       <div class="col-md-6">
         <h1 class="display-4 text-start">Projects</h1>
       </div>
+      <div class="col-md-6 d-flex align-items-end justify-content-md-end">
+        <p class="text-muted mb-0 text-md-end" style="max-width: 22rem;">
+          New builds ship to <a class="link-light" href="https://github.com/AngePort" target="_blank" rel="noopener">github.com/AngePort</a> first. Feature them here as soon as they reach showcase quality.
+        </p>
+      </div>
     </div>
 
     <div class="vstack gap-3">
@@ -27,6 +32,38 @@
 
     {% if not_draft > include.limit %}
       <p class="text-center pt-4"><a href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a></p>
+    {% endif %}
+
+    {% assign github_repos = site.data.github_repos | default: empty %}
+    {% if github_repos and github_repos.size > 0 %}
+      <div class="mt-5 pt-4 border-top">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+          <h2 class="h4 mb-0">Latest on GitHub</h2>
+          <a class="btn btn-outline-light btn-sm" href="https://github.com/AngePort?tab=repositories" target="_blank" rel="noopener">Open GitHub Profile</a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
+          {% for repo in github_repos %}
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2 gap-2">
+                    <h3 class="h5 mb-0"><a href="{{ repo.url }}" target="_blank" rel="noopener">{{ repo.name }}</a></h3>
+                    {% if repo.language %}
+                      <span class="badge text-bg-secondary">{{ repo.language }}</span>
+                    {% endif %}
+                  </div>
+                  {% if repo.description %}
+                    <p class="mb-2 text-muted small">{{ repo.description }}</p>
+                  {% endif %}
+                  {% if repo.updated_at %}
+                    <p class="mb-0 text-muted small">Updated {{ repo.updated_at | date: "%b %d, %Y" }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
     {% endif %}
 
   </div>

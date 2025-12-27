@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Better VPN Prototype cover">
+  <defs>
+    <linearGradient id="vpn-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1221" />
+      <stop offset="100%" stop-color="#1f2a44" />
+    </linearGradient>
+    <linearGradient id="vpn-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d8ff" />
+      <stop offset="100%" stop-color="#00ffa3" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#vpn-bg)" rx="40" />
+  <g transform="translate(210, 250)">
+    <rect x="60" y="60" width="320" height="260" rx="24" fill="rgba(0,0,0,0.35)" stroke="#00d8ff" stroke-width="5" />
+    <path d="M120 120 H320 V260 H120 Z" fill="none" stroke="#00ffa3" stroke-width="4" stroke-dasharray="20 16" />
+    <circle cx="220" cy="190" r="70" fill="rgba(0,216,255,0.15)" stroke="#00ffa3" stroke-width="6" />
+    <path d="M220 140 L260 200 L220 240 L180 200 Z" fill="#00ffa3" opacity="0.8" />
+    <polyline points="120,320 220,360 320,320" fill="none" stroke="#00d8ff" stroke-width="6" />
+  </g>
+  <text x="640" y="360" fill="#8be8ff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" letter-spacing="6">BETTER VPN PROTOTYPE</text>
+  <text x="640" y="460" fill="#ffffff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="88" font-weight="700">Security Lab</text>
+  <rect x="640" y="500" width="520" height="6" fill="url(#vpn-accent)" rx="3" />
+  <text x="640" y="580" fill="#c2fff5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36">Redis intel · NQC isolation · Metrics</text>
+  <text x="640" y="640" fill="#8be8ff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30">Python services · Faster triage loops</text>
+</svg>

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "LookOut",
+    "description": "An event-discovery app that surfaces nearby happenings in real time.",
+    "url": "https://github.com/AngePort/LookOut",
+    "language": "TypeScript",
+    "updated_at": "2025-12-16T20:57:06Z"
+  },
+  {
+    "name": "HelpHive",
+    "description": "AI-powered assistant that renames and organizes folders based on their contents.",
+    "url": "https://github.com/AngePort/HelpHive",
+    "language": "Python",
+    "updated_at": "2025-11-28T06:10:45Z"
+  },
+  {
+    "name": "Group-Navigation",
+    "description": "Coordinated navigation app that keeps groups aligned on shared destinations.",
+    "url": "https://github.com/AngePort/Group-Navigation",
+    "language": "Python",
+    "updated_at": "2025-10-30T05:28:40Z"
+  },
+  {
+    "name": "AngePort.github.io",
+    "description": "Source for Angello Portillo's professional TechFolio portfolio site.",
+    "url": "https://github.com/AngePort/AngePort.github.io",
+    "language": "CSS",
+    "updated_at": "2025-10-28T00:56:36Z"
+  },
+  {
+    "name": "Better_VPN_Prototype_1",
+    "description": "VPN security prototype combining Redis caching with quarantined channels to block threats.",
+    "url": "https://github.com/AngePort/Better_VPN_Prototype_1",
+    "language": "Python",
+    "updated_at": "2025-07-30T21:15:06Z"
+  },
+  {
+    "name": "flavor-forge",
+    "description": "Meteor + React recipe hub used for FlavorForge's team collaboration and deployment experiments.",
+    "url": "https://github.com/AngePort/flavor-forge",
+    "language": "JavaScript",
+    "updated_at": "2024-04-04T23:02:05Z"
+  },
+  {
+    "name": "Meteor2-WOD-PREP",
+    "description": "Practice sandbox for speeding up ICS Work-Out-of-the-Day assignments on Meteor + React.",
+    "url": "https://github.com/AngePort/Meteor2-WOD-PREP",
+    "language": "JavaScript",
+    "updated_at": "2024-03-14T20:30:50Z"
+  },
+  {
+    "name": "morning-brew-meteor",
+    "description": "Coffee shop loyalty dashboard prototype with role-based features built on Meteor.",
+    "url": "https://github.com/AngePort/morning-brew-meteor",
+    "language": "JavaScript",
+    "updated_at": "2024-03-07T21:56:07Z"
+  }
+]

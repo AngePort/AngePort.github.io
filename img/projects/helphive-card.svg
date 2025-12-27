@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="HelpHive project cover">
+  <defs>
+    <linearGradient id="helphive-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c0f2b" />
+      <stop offset="100%" stop-color="#432371" />
+    </linearGradient>
+    <linearGradient id="helphive-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffbe0b" />
+      <stop offset="100%" stop-color="#fb5607" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#helphive-bg)" rx="40" />
+  <g transform="translate(220, 260)">
+    <polygon points="200,80 320,160 320,320 200,400 80,320 80,160" fill="rgba(255,255,255,0.05)" stroke="#ffbe0b" stroke-width="6" />
+    <path d="M200 140 L260 180 L260 300 L200 340 L140 300 L140 180 Z" fill="#ffbe0b" opacity="0.3" />
+    <path d="M200 180 L230 200 L230 280 L200 300 L170 280 L170 200 Z" fill="#fb5607" opacity="0.8" />
+  </g>
+  <text x="640" y="360" fill="#ffd87a" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" letter-spacing="6">HELPHIVE</text>
+  <text x="640" y="460" fill="#ffffff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="96" font-weight="700">AI Folder Renamer</text>
+  <rect x="640" y="500" width="520" height="6" fill="url(#helphive-accent)" rx="3" />
+  <text x="640" y="580" fill="#ffe9b0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36">Python · LLM prompts · macOS CLI</text>
+  <text x="640" y="640" fill="#ffd87a" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30">Dry-run safety · OCR insights · Typer UX</text>
+</svg>

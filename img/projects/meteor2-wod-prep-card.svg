@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Meteor WOD Prep cover">
+  <defs>
+    <linearGradient id="wod-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c0f12" />
+      <stop offset="100%" stop-color="#401313" />
+    </linearGradient>
+    <linearGradient id="wod-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7b7b" />
+      <stop offset="100%" stop-color="#ffc46b" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wod-bg)" rx="40" />
+  <g transform="translate(220, 250)">
+    <rect x="60" y="60" width="320" height="240" rx="24" fill="rgba(255,255,255,0.05)" stroke="#ff7b7b" stroke-width="5" />
+    <line x1="100" y1="140" x2="340" y2="140" stroke="#ffc46b" stroke-width="6" />
+    <line x1="100" y1="200" x2="340" y2="200" stroke="#ffc46b" stroke-width="6" stroke-dasharray="30 18" />
+    <line x1="100" y1="260" x2="340" y2="260" stroke="#ff7b7b" stroke-width="6" />
+    <circle cx="200" cy="320" r="70" fill="rgba(255,123,123,0.2)" />
+    <text x="185" y="330" fill="#ffc46b" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700">CI</text>
+  </g>
+  <text x="640" y="360" fill="#ffb0b0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" letter-spacing="6">METEOR WOD PREP</text>
+  <text x="640" y="460" fill="#ffffff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="96" font-weight="700">Practice Lab</text>
+  <rect x="640" y="500" width="520" height="6" fill="url(#wod-accent)" rx="3" />
+  <text x="640" y="580" fill="#ffd7c2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36">Meteor · React · ESLint · Cypress</text>
+  <text x="640" y="640" fill="#ffb0b0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30">Timed reps · Sample data · CI drills</text>
+</svg>
