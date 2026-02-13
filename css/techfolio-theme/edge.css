@@ -1,0 +1,412 @@
+/* Edge theme: simple + fun, sharper corners, more "layout".
+   Avoids heavy gradients/blur; relies on borders, stripes, and spacing.
+*/
+
+:root {
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --bs-link-color: var(--bs-primary);
+
+  --tf-page-bg-color: var(--bs-body-bg);
+  --tf-projects-bg-color: var(--bs-gray-100);
+  --tf-footer-bg-color: var(--bs-gray-100);
+
+  --tf-accent: var(--bs-primary);
+  --tf-accent-dark: var(--bs-body-color);
+  --tf-accent-muted: rgba(13, 110, 253, 0.12);
+
+  --tf-edge-radius: 0.2rem;
+  --tf-border: 1px solid rgba(0, 0, 0, 0.12);
+  --tf-border-strong: 2px solid rgba(0, 0, 0, 0.16);
+}
+
+body {
+  background: var(--tf-page-bg-color);
+  color: var(--bs-body-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body > section {
+  margin-top: 2.25rem;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* Navbar */
+.tf-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--bs-body-bg);
+  border-bottom: var(--tf-border);
+  padding: 0.75rem 0;
+}
+
+.tf-navbar-scrolled {
+  background: var(--bs-body-bg);
+}
+
+.tf-navbar-brand {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.tf-navbar-label {
+  font-size: 0.75rem;
+  color: var(--bs-secondary-color);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tf-navbar-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.tf-navbar-links .tf-nav-link {
+  color: inherit;
+  opacity: 0.85;
+}
+
+.tf-navbar-links .tf-nav-link:hover {
+  opacity: 1;
+}
+
+/* Buttons */
+.tf-btn-primary {
+  background: var(--tf-accent);
+  border: 1px solid var(--tf-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: var(--tf-edge-radius);
+}
+
+.tf-btn-primary:hover {
+  color: #fff;
+  filter: brightness(0.95);
+  text-decoration: none;
+}
+
+.tf-btn-ghost,
+.tf-btn-ghost-dark {
+  background: transparent;
+  border: var(--tf-border);
+  color: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: var(--tf-edge-radius);
+}
+
+.tf-btn-ghost:hover,
+.tf-btn-ghost-dark:hover {
+  border-color: rgba(0, 0, 0, 0.28);
+  text-decoration: none;
+}
+
+.tf-btn-link {
+  color: var(--tf-accent);
+  font-weight: 700;
+}
+
+/* Eyebrows / titles */
+.tf-eyebrow,
+.tf-hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--bs-secondary-color);
+}
+
+.tf-section-title,
+.tf-hero-title {
+  font-weight: 800;
+}
+
+.tf-section-title {
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+  line-height: 1.2;
+}
+
+/* Hero: boxed header with a fun stripe */
+.tf-hero {
+  background: var(--bs-white);
+  border: var(--tf-border-strong);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.tf-hero::after {
+  content: none;
+}
+
+.tf-hero .tf-hero-stripe {
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(13, 110, 253, 0.22) 0,
+    rgba(13, 110, 253, 0.22) 16px,
+    rgba(13, 110, 253, 0.06) 16px,
+    rgba(13, 110, 253, 0.06) 32px
+  );
+  border-bottom: var(--tf-border);
+}
+
+.tf-hero-title {
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  margin-bottom: 0.25rem;
+}
+
+.tf-hero-summary {
+  max-width: 70ch;
+  color: var(--bs-body-color);
+  opacity: 0.95;
+}
+
+.tf-hero-portrait {
+  border: var(--tf-border);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.tf-hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tf-hero-credential {
+  border: var(--tf-border);
+  border-radius: 0;
+  background: var(--bs-white);
+  padding: 0.9rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.tf-hero-credential-logo img {
+  width: 44px;
+  height: 44px;
+}
+
+/* Capabilities */
+.tf-capabilities-card {
+  background: var(--bs-white);
+  border: var(--tf-border);
+  border-radius: 0;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.tf-capabilities-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
+  background: var(--bs-gray-200);
+  color: var(--bs-body-color);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  margin-bottom: 0.9rem;
+  border: var(--tf-border);
+}
+
+/* Projects */
+.tf-projects {
+  background: var(--tf-projects-bg-color);
+}
+
+.tf-project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 992px) {
+  .tf-project-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+}
+
+.tf-project-card {
+  background: var(--bs-white);
+  border: var(--tf-border-strong);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.tf-project-card-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .tf-project-card-inner {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.tf-project-card-media {
+  background: var(--bs-gray-200);
+  border-bottom: var(--tf-border);
+  min-height: 180px;
+}
+
+@media (min-width: 992px) {
+  .tf-project-card-media {
+    border-bottom: none;
+    border-right: var(--tf-border);
+  }
+}
+
+.tf-project-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+@media (min-width: 992px) {
+  .tf-project-card-media img {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+}
+
+.tf-project-card-body {
+  padding: 1.05rem 1.15rem;
+}
+
+.tf-project-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+
+.tf-project-card-date {
+  font-size: 0.8rem;
+  color: var(--bs-secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.tf-project-card-body h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.45rem;
+}
+
+.tf-project-card-summary {
+  color: var(--bs-secondary-color);
+  margin-bottom: 0.75rem;
+}
+
+.tf-project-card-tags span {
+  display: inline-flex;
+  padding: 0.18rem 0.6rem;
+  border-radius: 0;
+  border: var(--tf-border);
+  background: transparent;
+  font-size: 0.75rem;
+  margin: 0 0.35rem 0.35rem 0;
+}
+
+.tf-project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1.15rem 1.15rem;
+  flex-wrap: wrap;
+}
+
+/* Essays: keep existing structure, just boxy */
+.tf-essay-filter,
+.tf-essay-card {
+  border-radius: 0;
+  border: var(--tf-border);
+  background: var(--bs-white);
+  color: inherit;
+}
+
+.tf-essay-filter {
+  padding: 1.5rem;
+}
+
+.tf-essay-filter .text-muted {
+  color: var(--bs-secondary-color) !important;
+}
+
+.tf-essay-filter-pills button {
+  border-radius: 0;
+}
+
+.tf-essay-filter-pills button.active {
+  background: var(--bs-gray-200);
+}
+
+/* Footer */
+.tf-footer {
+  background: var(--tf-footer-bg-color);
+  color: inherit;
+  padding: 3rem 0 2rem;
+  margin-top: 3rem;
+  border-top: var(--tf-border);
+}
+
+.tf-footer-cta,
+.tf-footer-link-card {
+  border-radius: 0;
+  border: var(--tf-border);
+  background: var(--bs-white);
+  color: inherit;
+}
+
+.tf-footer-cta::before {
+  content: none;
+}
+
+.tf-footer-bottom {
+  border-top: var(--tf-border);
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .tf-navbar-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .tf-navbar .tf-btn-primary {
+    width: 100%;
+  }
+  .tf-project-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 991px) {
+  .tf-navbar-brand {
+    flex: 1 0 100%;
+  }
+}

@@ -1,0 +1,45 @@
+<article class="tf-project-card">
+  <div class="tf-project-card-inner">
+    <div class="tf-project-card-media">
+      {% if include.page.image %}
+        <img src="{{ site.baseurl }}/{{ include.page.image }}" alt="{{ include.page.title }} preview">
+      {% else %}
+        <div class="p-4 text-muted small">No preview image</div>
+      {% endif %}
+    </div>
+
+    <div>
+      <div class="tf-project-card-body">
+        <div class="tf-project-card-meta">
+          <span class="tf-project-card-date">{{ include.page.date | date: "%b %Y" }}</span>
+          {% if include.page.labels and include.page.labels.size > 0 %}
+            <span class="tf-eyebrow">{{ include.page.labels[0] }}</span>
+          {% endif %}
+        </div>
+
+        <h3>
+          <a href="{{ site.baseurl }}{{ include.page.url }}">{{ include.page.title }}</a>
+        </h3>
+
+        <p class="tf-project-card-summary">{{ include.page.summary }}</p>
+
+        {% if include.page.labels %}
+          <div class="tf-project-card-tags">
+            {% for label in include.page.labels %}
+              <span>{{ label }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="tf-project-card-footer">
+        {% if include.page.projecturl %}
+          <a href="{{ include.page.projecturl }}" class="tf-btn-ghost tf-btn-ghost-dark" target="_blank" rel="noopener">Project Site</a>
+        {% else %}
+          <a href="{{ site.baseurl }}{{ include.page.url }}" class="tf-btn-ghost tf-btn-ghost-dark">Read Case Study</a>
+        {% endif %}
+        <a href="{{ site.baseurl }}{{ include.page.url }}" class="tf-btn-link">Details →</a>
+      </div>
+    </div>
+  </div>
+</article>

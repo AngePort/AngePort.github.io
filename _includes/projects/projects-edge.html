@@ -1,0 +1,41 @@
+<section class="tf-projects" id="projects">
+  <div class="container py-5">
+    <div class="row gy-3 align-items-center mb-4">
+      <div class="col-lg-8">
+        <p class="tf-eyebrow">What I’m building</p>
+        <h2 class="tf-section-title mb-2">Projects</h2>
+        <p class="text-muted mb-0">
+          A quick scan of the latest builds. Click a card for the write-up.
+        </p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="btn tf-btn-ghost-dark" href="{{ site.baseurl }}/projects/">Browse archive</a>
+      </div>
+    </div>
+
+    <div class="tf-project-grid">
+      {% assign project_pages = site.pages | where: "type", "project" | sort: "date" | reverse %}
+      {% assign rendered = 0 %}
+      {% for page in project_pages %}
+        {% unless page.draft %}
+          {% include projects/project-card-edge.html page=page %}
+          {% assign rendered = rendered | plus: 1 %}
+        {% endunless %}
+        {% if include.limit and rendered == include.limit %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% assign not_draft = 0 %}
+    {% for page in project_pages %}
+      {% unless page.draft %}
+        {% assign not_draft = not_draft | plus: 1 %}
+      {% endunless %}
+    {% endfor %}
+
+    {% if include.limit and not_draft > include.limit %}
+      <p class="text-center pt-4"><a class="tf-btn-link" href="{{ site.baseurl }}/projects/">See all {{ not_draft }} projects</a></p>
+    {% endif %}
+  </div>
+</section>
