@@ -1,0 +1,45 @@
+<section class="tf-hero">
+  <div class="container py-5">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7">
+        <p class="tf-hero-eyebrow">{{ site.data.bio.basics.label }}</p>
+        <h1 class="tf-hero-title">{{ site.data.bio.basics.name }}</h1>
+        <p class="tf-hero-summary">{{ site.data.bio.basics.summary }}</p>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn tf-btn-primary" href="{{ '/hard_copy_resume/Angello-Portillo Resume 2025 .pdf' | relative_url }}" download="Angello-Portillo-Resume-2025.pdf">Download Resume</a>
+          <a class="btn tf-btn-ghost" href="{{ '/#projects' | prepend: site.baseurl }}">View Projects</a>
+        </div>
+
+        <div class="tf-hero-social mt-4">
+          {% if site.data.bio.basics.email %}
+            {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
+            {% include about/social.html url=url name='envelope' label='Email' %}
+          {% endif %}
+          {% for profile in site.data.bio.basics.profiles %}
+            {% capture url %}{{ profile.url }}{% endcapture %}
+            {% capture name %}{{ profile.network | downcase }}{% endcapture %}
+            {% include about/social.html url=url name=name label=profile.network %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="tf-hero-portrait">
+          <img src="{{ site.data.bio.basics.picture }}" alt="Portrait of {{ site.data.bio.basics.name }}">
+        </div>
+
+        <div class="tf-hero-credential" aria-label="Education credential">
+          <div class="tf-hero-credential-logo" aria-hidden="true">
+            <img src="{{ '/img/Manoa-Logo.png' | relative_url }}" alt="University of Hawaiʻi at Mānoa seal">
+          </div>
+          <div class="tf-hero-credential-copy">
+            <p class="tf-hero-credential-eyebrow">Education</p>
+            <p class="tf-hero-credential-title">B.S. Computer Science</p>
+            <p class="tf-hero-credential-meta">University of Hawaiʻi at Mānoa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
