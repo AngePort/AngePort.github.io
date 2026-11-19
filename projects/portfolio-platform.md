@@ -10,15 +10,14 @@ labels:
   - GitHub Pages
   - Web Design
   - Automation
-summary: "Customized TechFolio deployment hosted on GitHub Pages with automation guides for agents, structured data, and a growing knowledge base."
+summary: "Customized TechFolio deployment hosted on GitHub Pages with structured data and a growing knowledge base."
 ---
 
 # Overview
-This repository powers the site you are reading. I forked the TechFolio starter, modernized the Bitter theme, and layered on custom includes, essay feeds, and agent-focused documentation so collaborators (human or AI) can safely extend the portfolio. Every section—About, Projects, Essays, Resume—pulls from structured data files so updates stay consistent across cards and standalone pages.
+This repository powers the site you are reading. I forked the TechFolio starter, modernized the Bitter theme, and layered on custom includes and essay feeds. Every section—About, Projects, Essays, Resume—pulls from structured data files so updates stay consistent across cards and standalone pages.
 
 # What Makes It Different
-- **Agent Operations Guide:** A dedicated `agents/` workspace documents the system prompt, deployment workflow, and GitHub sync scripts so assistants share the same playbook.
-- **Dynamic GitHub feed:** `_data/github_repos.json` and a lightweight sync script keep the Projects page aware of the latest public repositories.
+- **Dynamic GitHub feed:** `_data/github_repos.json` keeps the Projects page aware of the latest public repositories.
 - **Content architecture:** `_data/bio.json` drives hero content, `_includes/*` handles reusable sections, and `_layouts/*` keep page shells clean for future redesigns.
 - **Accessibility pass:** Color contrast tweaks, responsive typography, and alt-text guidance ensure the site remains recruiter-friendly.
 
