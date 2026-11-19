@@ -21,6 +21,6 @@
   <text x="640" y="360" fill="#c4b5fd" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" letter-spacing="6">TECHFOLIO PLATFORM</text>
   <text x="640" y="460" fill="#ffffff" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="700">Portfolio System</text>
   <rect x="640" y="500" width="520" height="6" fill="url(#portfolio-accent)" rx="3" />
-  <text x="640" y="580" fill="#f5d0fe" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36">Jekyll · TechFolio · Agent workflows</text>
-  <text x="640" y="640" fill="#c4b5fd" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30">Structured data · GitHub Pages · Ops guide</text>
+  <text x="640" y="580" fill="#f5d0fd" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36">Jekyll · TechFolio · Structured data</text>
+  <text x="640" y="640" fill="#c4b5fd" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30">Web design · GitHub Pages · Accessibility</text>
 </svg>
