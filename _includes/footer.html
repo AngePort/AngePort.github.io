@@ -4,7 +4,7 @@
       <div class="col-lg-7">
         <p class="tf-footer-eyebrow">Portfolio · {{ "now" | date: "%Y" }}</p>
         <h3 class="tf-footer-title mb-2">Thanks for looking at what I think is cool :)</h3>
-        <p class="tf-footer-text">This space collects the projects, essays, and resume snapshots that showcase my work as a {{ site.data.bio.basics.label }}.</p>
+        <p class="tf-footer-text">This is where I keep my projects, essays, and a resume snapshot &mdash; basically the stuff I'm proud to share as a {{ site.data.bio.basics.label }}.</p>
         <div class="d-flex flex-wrap gap-3 mt-3">
           {% if site.data.bio.basics.email %}
             <a class="btn tf-btn-primary" href="mailto:{{ site.data.bio.basics.email }}">Email {{ site.data.bio.basics.name }}</a>
@@ -22,23 +22,23 @@
           <div class="tf-footer-quick-links" role="list">
             <a class="tf-footer-link-card" href="{{ '/#projects' | prepend: site.baseurl }}" role="listitem">
               <span class="tf-footer-link-label">Projects</span>
-              <span class="tf-footer-link-subtitle">Hardware, data, & ops</span>
+              <span class="tf-footer-link-subtitle">Builds + case studies</span>
               <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
             </a>
             <a class="tf-footer-link-card" href="{{ '/#essays' | prepend: site.baseurl }}" role="listitem">
               <span class="tf-footer-link-label">Essays</span>
-              <span class="tf-footer-link-subtitle">Retros + playbooks</span>
+              <span class="tf-footer-link-subtitle">Notes + lessons learned</span>
               <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
             </a>
             <a class="tf-footer-link-card" href="{{ '/resume.html' | prepend: site.baseurl }}" role="listitem">
               <span class="tf-footer-link-label">Resume</span>
-              <span class="tf-footer-link-subtitle">One sheet for recruiters</span>
+              <span class="tf-footer-link-subtitle">One-page resume</span>
               <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
             </a>
             {% if site.data.bio.basics.website %}
               <a class="tf-footer-link-card" href="{{ site.data.bio.basics.website }}" target="_blank" rel="noopener" role="listitem">
                 <span class="tf-footer-link-label">Site</span>
-                <span class="tf-footer-link-subtitle">Extended portfolio hub</span>
+                <span class="tf-footer-link-subtitle">All the links</span>
                 <span class="tf-footer-link-arrow" aria-hidden="true">↗</span>
               </a>
             {% endif %}
