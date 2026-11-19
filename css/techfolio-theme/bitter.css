@@ -16,7 +16,7 @@
   --tf-accent-dark: #052c21;
   --tf-accent-muted: #d2f3e7;
   --tf-surface: #edf7f3;
-  --tf-hero-gradient: linear-gradient(135deg, #04121c 0%, #052c24 45%, #0caf82 110%);
+  --tf-hero-gradient: linear-gradient(100eg, #04121c 0%, #052c24 45%, #0caf82 110%);
   --tf-card-bg: rgba(4, 18, 28, 0.35);
   --tf-card-border: rgba(255, 255, 255, 0.2);
   --tf-shadow-soft: 0 24px 70px rgba(3, 11, 29, 0.35);
