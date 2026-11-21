@@ -3,7 +3,19 @@ title: Home
 layout: home
 ---
 
-{% include about/about.html %}
-{% include about/capabilities.html %}
-{% include projects/projects.html limit=4 %}
-{% include essays/essays.html limit=6 %}
+<main class="timeline-canvas" aria-label="Angello Portillo timeline">
+  <div class="timeline-stage">
+    <h1 class="timeline-name">Angello Portillo</h1>
+
+    <div class="timeline-track" role="slider" tabindex="0"
+         aria-label="Timeline year" aria-valuemin="2001"
+         aria-valuemax="2026" aria-valuenow="2026">
+      <div class="timeline-progress" aria-hidden="true"></div>
+      <div class="timeline-tick timeline-tick-start" aria-hidden="true"></div>
+      <div class="timeline-tick timeline-tick-end" aria-hidden="true"></div>
+      <output class="timeline-year" for="timeline-year">2026</output>
+    </div>
+
+    <button class="timeline-action" type="button">Explore</button>
+  </div>
+</main>
