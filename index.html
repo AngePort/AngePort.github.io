@@ -48,7 +48,7 @@ layout: home
 
       <!-- Replace this image with any portrait you want. -->
       <figure class="career-portrait">
-        <img src="{{ '/img/AngePort.jpg' | relative_url }}" alt="Portrait of Angello Portillo">
+        <img src="{{ '/img/AngePort_casual.jpg' | relative_url }}" alt="Portrait of Angello Portillo">
       </figure>
     </div>
   </section>
@@ -206,4 +206,14 @@ layout: home
       </div>
     </div>
   </section>
+
+  <!-- Template for years with no content: -->
+  <template id="locked-in-template">
+    <!-- Reused heading and sprite for timeline years with no career or education data. -->
+    <div class="locked-in-state">
+      <h2 class="locked-in-title">Locked In</h2>
+      <img src="{{ '/img/sprites/me_locked_in.png' | relative_url }}"
+           alt="Knight pose representing a locked-in year">
+    </div>
+  </template>
 </main>

@@ -96,5 +96,17 @@
     });
   }, { passive: true });
 
+  // Insert Locked In only in year blocks that have no timeline content.
+  const lockedTemplate = document.querySelector('#locked-in-template');
+  yearSections.forEach((section) => {
+    const copy = section.querySelector('.career-year-copy');
+    if (!copy) return;
+
+    const hasContent = copy.textContent.trim().length > 0;
+    if (!hasContent && lockedTemplate) {
+      copy.appendChild(lockedTemplate.content.cloneNode(true));
+    }
+  });
+
   setYear(endYear);
 })();

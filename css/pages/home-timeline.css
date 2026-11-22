@@ -1,5 +1,5 @@
 :root {
-  --timeline-bg: #f4f4ef;
+  --timeline-bg: #c4c4c4;
 
   --timeline-ink: #111827;
   --timeline-muted: #64748b;
@@ -275,6 +275,29 @@ body {
 /* Year blocks with no portrait use the copy in the right column. */
 .career-year:not(#year-2026) .career-year-copy {
   grid-column: 2;
+}
+
+/* Empty-year state with a large black heading and locked sprite. */
+.locked-in-state {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.locked-in-title {
+  margin: 0;
+  color: #000;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.locked-in-state img {
+  width: min(28vw, 320px);
+  max-height: 60vh;
+  display: block;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 /* Stack cleanly on small screens. */
