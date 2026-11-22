@@ -1,8 +1,9 @@
 :root {
   --timeline-bg: #f4f4ef;
+
   --timeline-ink: #111827;
   --timeline-muted: #64748b;
-  --timeline-accent: #16866f;
+  --timeline-accent: #cd0f0f;
   --timeline-line: rgba(17, 24, 39, 0.18);
 }
 
@@ -15,7 +16,7 @@ body {
   margin: 0;
   background: var(--timeline-bg);
   color: var(--timeline-ink);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* Sticky header contains only the Resume button and horizontal timeline. */
@@ -59,38 +60,27 @@ body {
   color: var(--timeline-bg);
 }
 
-/* Pixel knight that follows the timeline position. */
-.timeline-runner {
-  --runner-direction: 1;
+/* Static Me marker follows the dot and flips with timeline direction. */
+.timeline-me {
+  --me-direction: 1;
   position: absolute;
-  left: var(--runner-position, 100%);
-  bottom: 16px;
-  z-index: 3;
+  left: var(--timeline-position);
+  bottom: 28px;
+  z-index: 4;
   width: 56px;
   height: 56px;
-  transform: translateX(-50%) scaleX(var(--runner-direction));
+  transform: translateX(-50%) scaleX(var(--me-direction));
   transform-origin: center;
   transition: left 180ms ease, transform 180ms ease;
   pointer-events: none;
 }
 
-/* Frame image stays crisp and is flipped for reverse movement. */
-.timeline-runner img {
+.timeline-me img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: contain;
   image-rendering: pixelated;
-}
-
-/* Bounce the image only, leaving the runner container free to flip horizontally. */
-.timeline-runner.is-running img {
-  animation: runner-bounce 180ms steps(2, end) infinite;
-}
-
-@keyframes runner-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
 }
 
 /* Horizontal year selector. */
@@ -157,14 +147,8 @@ body {
   font-size: 1rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  opacity: 0;
-  transition: opacity 120ms ease;
-}
-
-.timeline-track:hover .timeline-year,
-.timeline-track:focus-visible .timeline-year,
-.timeline-track.is-active .timeline-year {
   opacity: 1;
+  transition: opacity 120ms ease;
 }
 
 /* Main page containing all year segments. */
@@ -212,7 +196,7 @@ body {
   top: clamp(2rem, 7vh, 5rem);
   left: clamp(1.5rem, 5vw, 5rem);
   z-index: 2;
-  font-size: clamp(4.5rem, 10vw, 9rem);
+  font-size: 50px;
   line-height: 1;
   letter-spacing: -0.08em;
   color: rgba(17, 24, 39, 0.14);
@@ -228,20 +212,19 @@ body {
 
 .career-year-copy h2 {
   margin: 0.25rem 0 0.5rem;
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-size: 15px;
 }
 
 .career-name {
   margin: 0 0 1.25rem;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
+  font-size: 50px;
+  line-height: 1;
 }
 
 .career-type {
   margin: 0;
   color: var(--timeline-accent);
-  font-size: 0.78rem;
+  font-size: 25px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -261,7 +244,7 @@ body {
   grid-column: 1;
   grid-row: 1;
   overflow: hidden;
-  border-radius: 1.5rem;
+  border: 10px solid red;
   background: rgba(17, 24, 39, 0.08);
 }
 

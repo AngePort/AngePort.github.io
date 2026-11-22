@@ -78,11 +78,20 @@
   ],
   "work": [
     {
+      "company": "Raytheon Technologies",
+      "position": "System Engineer",
+      "website": "",
+      "startDate": "2026-06",
+      "endDate": "Present",
+      "summary": "As a TSCEI Systems Engineer at Raytheon, I support the integration, troubleshooting, testing, and verification of complex shipboard computing and infrastructure systems. My daily responsibilities involve coordinating across engineering disciplines, evaluating system performance, resolving technical issues, documenting results, and ensuring system components operate reliably and meet established requirements."
+    },
+
+    {
       "company": "Med-QUEST (Hawai‘i DHS)",
       "position": "Project Engineering Intern",
       "website": "",
       "startDate": "2025-12",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "summary": "Enhancing the Med-QUEST member services platform by redesigning workflows, integrating secure APIs, and deploying database architectures across Microsoft Entra, Azure, and Oracle services to boost scalability and compliance."
     },
     {
