@@ -6,7 +6,7 @@
   --timeline-line: rgba(17, 24, 39, 0.18);
 }
 
-/* Reset page defaults and keep the viewport as the scroll area. */
+/* Smooth scrolling keeps timeline jumps easy to follow. */
 html {
   scroll-behavior: smooth;
 }
@@ -18,13 +18,13 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Pin the name, resume button, and horizontal timeline to the top. */
+/* Sticky header contains only the Resume button and horizontal timeline. */
 .timeline-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  min-height: 132px;
-  padding: 1.25rem clamp(1.25rem, 5vw, 5rem) 1.1rem;
+  min-height: 96px;
+  padding: 0.85rem clamp(1.25rem, 5vw, 5rem);
   box-sizing: border-box;
   background: rgba(244, 244, 239, 0.94);
   backdrop-filter: blur(14px);
@@ -33,24 +33,17 @@ body {
 
 .timeline-heading {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: flex-start;
 }
 
-/* Large name at the top of the canvas. */
-.timeline-name {
-  margin: 0;
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
-  font-weight: 600;
+.timeline-heading-space {   
+  display: none;
 }
 
-/* Resume link styled as the existing timeline button. */
+/* Resume button: replace the link when you connect it elsewhere. */
 .timeline-action {
   min-width: 120px;
-  padding: 0.65rem 1.25rem;
+  padding: 0.55rem 0.25rem;
   border: 1px solid var(--timeline-ink);
   border-radius: 999px;
   color: var(--timeline-ink);
@@ -66,13 +59,47 @@ body {
   color: var(--timeline-bg);
 }
 
-/* Horizontal selector above the vertical career blocks. */
+/* Pixel knight that follows the timeline position. */
+.timeline-runner {
+  --runner-direction: 1;
+  position: absolute;
+  left: var(--runner-position, 100%);
+  bottom: 16px;
+  z-index: 3;
+  width: 56px;
+  height: 56px;
+  transform: translateX(-50%) scaleX(var(--runner-direction));
+  transform-origin: center;
+  transition: left 180ms ease, transform 180ms ease;
+  pointer-events: none;
+}
+
+/* Frame image stays crisp and is flipped for reverse movement. */
+.timeline-runner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+/* Bounce the image only, leaving the runner container free to flip horizontally. */
+.timeline-runner.is-running img {
+  animation: runner-bounce 180ms steps(2, end) infinite;
+}
+
+@keyframes runner-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Horizontal year selector. */
 .timeline-track {
   --timeline-position: 100%;
   position: relative;
   width: min(980px, 92%);
   height: 44px;
-  margin: 0.9rem auto 0;
+  margin: -0.1rem auto 0;
   cursor: crosshair;
   touch-action: none;
 }
@@ -124,7 +151,7 @@ body {
 .timeline-year {
   position: absolute;
   left: var(--timeline-position);
-  bottom: 38px;
+  top: 34px;
   min-width: 5rem;
   transform: translateX(-50%);
   font-size: 1rem;
@@ -140,94 +167,75 @@ body {
   opacity: 1;
 }
 
-/* Vertical page timeline. The first block begins below the sticky header. */
+/* Main page containing all year segments. */
 .career-timeline {
-  position: relative;
-  width: min(1080px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 3rem 0 6rem;
+  width: 100%;
 }
 
-.career-timeline::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--timeline-line);
-  transform: translateX(-50%);
-}
-
-/* Each year is a large square-like block that scrolls one under another. */
+/* One complete page segment per year. */
 .career-year {
   position: relative;
-  min-height: min(72vh, 620px);
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  overflow: hidden;
+  scroll-margin-top: 96px;
+  background-color: var(--timeline-bg);
+  background-image:
+    linear-gradient(rgba(244, 244, 239, 0.78), rgba(244, 244, 239, 0.78)),
+    var(--year-image, none);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid var(--timeline-line);
+}
+
+/* Light separator at the top of later year segments. */
+.career-year:nth-of-type(even) {
+  --section-tint: rgba(17, 24, 39, 0.03);
+  background-color: var(--section-tint);
+}
+
+.career-year-content {
+  width: min(1180px, calc(100% - 3rem));
+  min-height: calc(100vh - 150px);
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
   align-items: center;
-  gap: clamp(2rem, 8vw, 6rem);
-  scroll-margin-top: 150px;
+  gap: clamp(2rem, 7vw, 7rem);
+  box-sizing: border-box;
 }
 
-.career-year:nth-of-type(even) .career-year-label {
-  grid-column: 2;
-  grid-row: 1;
-  text-align: left;
-}
-
-.career-year:nth-of-type(even) .career-card {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-/* Year number sits on the center line. */
+/* Year text is large but remains a simple page label. */
 .career-year-label {
-  grid-column: 1;
-  text-align: right;
-  font-size: clamp(4.5rem, 11vw, 9rem);
-  line-height: 0.85;
+  position: absolute;
+  top: clamp(2rem, 7vh, 5rem);
+  left: clamp(1.5rem, 5vw, 5rem);
+  z-index: 2;
+  font-size: clamp(4.5rem, 10vw, 9rem);
+  line-height: 1;
   letter-spacing: -0.08em;
-  color: rgba(17, 24, 39, 0.12);
+  color: rgba(17, 24, 39, 0.14);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
 
-.career-year-label::after {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-left: clamp(0.5rem, 2vw, 1.25rem);
-  border: 3px solid var(--timeline-bg);
-  border-radius: 50%;
-  /* background: var(--timeline-accent); */
-  /* box-shadow: 0 0 0 2px var(--timeline-accent); */
-  vertical-align: middle;
-}
-
-.career-year:nth-of-type(even) .career-year-label::after {
-  order: -1;
-  margin: 0 clamp(0.5rem, 2vw, 1.25rem) 0 0;
-}
-
-/* Simple card for resume details inside each year block. */
-.career-card {
-  max-width: 420px;
-  padding: clamp(1.25rem, 3vw, 2rem);
-  border: 1px solid var(--timeline-line);
-  border-radius: 1.25rem;
-  background: rgba(255, 255, 255, 0.68);
-  box-shadow: 0 18px 50px rgba(17, 24, 39, 0.07);
-}
-
-.career-card h2 {
-  margin: 0.25rem 0 0.5rem;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
-}
-
-.career-card p {
+.career-year-copy {
+  max-width: 620px;
+  grid-column: 2;
   line-height: 1.7;
+}
+
+.career-year-copy h2 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+}
+
+.career-name {
+  margin: 0 0 1.25rem;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
 }
 
 .career-type {
@@ -242,49 +250,75 @@ body {
 .career-date {
   color: var(--timeline-muted);
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Stack the layout on phones instead of using alternating sides. */
+/* 2026 portrait slot: replace the source in index.html. */
+.career-portrait {
+  width: min(28vw, 360px);
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  grid-column: 1;
+  grid-row: 1;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: rgba(17, 24, 39, 0.08);
+}
+
+.career-portrait img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* 2026 layout: portrait on the left and name/details on the right. */
+#year-2026 .career-year-copy {
+  grid-column: 2;
+}
+
+/* Year blocks with no portrait use the copy in the right column. */
+.career-year:not(#year-2026) .career-year-copy {
+  grid-column: 2;
+}
+
+/* Stack cleanly on small screens. */
 @media (max-width: 760px) {
   .timeline-header {
-    min-height: 122px;
+    min-height: 92px;
   }
 
-  .career-timeline::before {
-    left: 1.25rem;
+  .career-year {
+    scroll-margin-top: 92px;
   }
 
-  .career-year,
-  .career-year:nth-of-type(even) {
+  .career-year-content {
+    width: calc(100% - 2.5rem);
     grid-template-columns: 1fr;
     align-content: center;
-    gap: 1.25rem;
-    padding-left: 3.25rem;
   }
 
-  .career-year-label,
-  .career-year:nth-of-type(even) .career-year-label {
+  .career-year-label {
+    top: 2rem;
+  }
+
+  .career-year-copy,
+  #year-2026 .career-year-copy,
+  .career-year:not(#year-2026) .career-year-copy {
     grid-column: 1;
-    grid-row: 1;
-    text-align: left;
   }
 
-  .career-card,
-  .career-year:nth-of-type(even) .career-card {
+  .career-portrait {
+    width: min(55vw, 280px);
     grid-column: 1;
-    grid-row: 2;
   }
 
-  .career-year-label::after,
-  .career-year:nth-of-type(even) .career-year-label::after {
-    position: absolute;
-    left: 0.5rem;
-    margin: 0;
+  .career-name {
+    font-size: clamp(2.8rem, 14vw, 5rem);
   }
 }
 
-/* Keep motion and focus behavior predictable. */
+/* Respect reduced motion preferences. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .timeline-year,
