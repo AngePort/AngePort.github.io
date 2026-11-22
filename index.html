@@ -66,6 +66,14 @@ layout: home
           <p class="career-date">{{ role.startDate }} — {{ role.endDate }}</p>
           <p>{{ role.summary }}</p>
         {% endfor %}
+
+        {% assign education_2025 = site.data.bio.education | where_exp: "school", "school.endDate contains '2025'" %}
+        {% for school in education_2025 %}
+          <p class="degree-earned">Degree Earned</p>
+          <h2>{{ school.institution }}</h2>
+          <p class="career-date">{{ school.studyType }} · {{ school.startDate }} — {{ school.endDate }}</p>
+        {% endfor %}
+
       </div>
     </div>
   </section>
@@ -82,13 +90,6 @@ layout: home
           <h2>{{ role.company }}</h2>
           <p class="career-date">{{ role.startDate }} — {{ role.endDate }}</p>
           <p>{{ role.summary }}</p>
-        {% endfor %}
-
-        {% assign education_2024 = site.data.bio.education | where_exp: "school", "school.startDate contains '2024'" %}
-        {% for school in education_2024 %}
-          <p class="career-type">{{ school.studyType }}</p>
-          <h2>{{ school.institution }}</h2>
-          <p class="career-date">{{ school.startDate }} — {{ school.endDate }}</p>
         {% endfor %}
       </div>
     </div>
@@ -127,9 +128,9 @@ layout: home
 
         {% assign education_2022 = site.data.bio.education | where_exp: "school", "school.startDate contains '2022'" %}
         {% for school in education_2022 %}
-          <p class="career-type">{{ school.studyType }}</p>
+          <p class="degree-earned">Degree Earned</p>
           <h2>{{ school.institution }}</h2>
-          <p class="career-date">{{ school.startDate }} — {{ school.endDate }}</p>
+          <p class="career-date">{{ school.studyType }} · {{ school.startDate }} — {{ school.endDate }}</p>
         {% endfor %}
       </div>
     </div>
@@ -151,9 +152,9 @@ layout: home
 
         {% assign education_2021 = site.data.bio.education | where_exp: "school", "school.startDate contains '2021'" %}
         {% for school in education_2021 %}
-          <p class="career-type">{{ school.studyType }}</p>
+          <p class="degree-earned">Degree Earned</p>
           <h2>{{ school.institution }}</h2>
-          <p class="career-date">{{ school.startDate }} — {{ school.endDate }}</p>
+          <p class="career-date">{{ school.studyType }} · {{ school.startDate }} — {{ school.endDate }}</p>
         {% endfor %}
       </div>
     </div>
@@ -175,9 +176,9 @@ layout: home
 
         {% assign education_2020 = site.data.bio.education | where_exp: "school", "school.startDate contains '2020'" %}
         {% for school in education_2020 %}
-          <p class="career-type">{{ school.studyType }}</p>
+          <p class="degree-earned">Degree Earned</p>
           <h2>{{ school.institution }}</h2>
-          <p class="career-date">{{ school.startDate }} — {{ school.endDate }}</p>
+          <p class="career-date">{{ school.studyType }} · {{ school.startDate }} — {{ school.endDate }}</p>
         {% endfor %}
       </div>
     </div>
@@ -195,6 +196,12 @@ layout: home
           <h2>{{ role.company }}</h2>
           <p class="career-date">{{ role.startDate }} — {{ role.endDate }}</p>
           <p>{{ role.summary }}</p>
+        {% endfor %}
+        {% assign education_2019 = site.data.bio.education | where_exp: "school", "school.endDate contains '2019'" %}
+        {% for school in education_2019 %}
+          <p class="degree-earned">Degree Earned</p>
+          <h2>{{ school.institution }}</h2>
+          <p class="career-date">{{ school.studyType }} · {{ school.startDate }} — {{ school.endDate }}</p>
         {% endfor %}
       </div>
     </div>

@@ -172,6 +172,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 1px solid var(--timeline-line);
+  padding: 20px;
 }
 
 /* Light separator at the top of later year segments. */
@@ -220,13 +221,24 @@ body {
   font-size: 50px;
   line-height: 1;
 }
-
+.degree-earned {
+ color: #c8a50a;  
+ margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+  border: 5px solid black;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-transform: uppercase;
+}
 .career-type {
   margin: 0;
   color: var(--timeline-accent);
   font-size: 25px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  border: 5px solid black;
+  letter-spacing: 0.01em;
+  text-align: center;
   text-transform: uppercase;
 }
 

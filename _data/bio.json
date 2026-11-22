@@ -68,6 +68,14 @@
       "courses": []
     },
     {
+      "institution": "Honolulu Community College",
+      "area": "Liberal Arts",
+      "studyType": "Associates of Liberal Arts",
+      "startDate": "2019",
+      "endDate": "2025",
+      "courses": []
+    },
+    {
       "institution": "Farrington High School",
       "area": "General Education",
       "studyType": "High School Diploma",
@@ -102,6 +110,13 @@
       "endDate": "2025-12",
       "summary": "Provided on-site technical support for government-issued hardware, software, and secure networks while maintaining AWS environments that power statewide services."
     },
+       {
+      "company": "Starbucks",
+      "position": "Starbucks Barista",
+      "website": "https://www.target.com/",
+      "startDate": "2024-07",
+      "endDate": "2024-12",
+      "summary": "Provided consistent, high-quality customer service. Developed teamwork, communication, multitasking, and time management skills while adapting to evolving safety protocols and high-pressure environments."},
     {
       "company": "Hawaii Space Grant Consortium",
       "position": "Lead Avionics Engineer",
@@ -133,6 +148,14 @@
       "startDate": "2019-10",
       "endDate": "2021-05",
       "summary": "Provided consistent, high-quality customer service at a licensed Starbucks inside Target during the COVID-19 pandemic. Developed teamwork, communication, multitasking, and time management skills while adapting to evolving safety protocols and high-pressure environments."
+    },
+    {
+      "company": "Journeys",
+      "position": "Sales Associate",
+      "startDate": "2019-06",
+      "endDate": "2019-09",
+      "summary": "Assisted customers in selecting and purchasing footwear and accessories, maintained store organization, and provided excellent customer service to enhance the shopping experience."
     }
+
   ]
 }
